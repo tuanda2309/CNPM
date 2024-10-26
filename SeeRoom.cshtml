@@ -1,0 +1,167 @@
+﻿@{
+    Layout = null;
+}
+
+@model IEnumerable<PODBookingSystem.ViewModels.RoomViewModel>
+
+@{
+    var profileImage = User.FindFirst("ProfileImage")?.Value ?? "~/img/default_image_path.jpg";
+}
+
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <title>POD BOOKING</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="~/img/logo.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="~/css/home.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logoArea">
+                <a href="@Url.Action("Index", "Home")" class="image"><img src="~/img/logo2.png"></a>
+                <a href="@Url.Action("Index", "Home")" class="siteName">
+                    <h1><span class="highlight">POD</span> BOOKING</h1>
+                </a>
+            </div>
+            <div class="menuArea">
+                <div class="menuBtn">
+                    <span class="line-1"></span>
+                    <span class="line-2"></span>
+                    <span class="line-3"></span>
+                </div>
+            </div>
+            <div class="navBar">
+                <ul>
+                    <li><a asp-controller="Home" class="active">🏠Trang chủ</a></li>
+                    <li><a asp-controller="Room" asp-action="SeeRoom">💻Xem phòng</a></li>
+                    <li><a href="~/service">🏪Dịch vụ</a></li>
+                    <li><a href="~/makeRes">🕋Đặt phòng</a></li>
+                    <li><a href="~/Vip">🕌Phòng VIP</a></li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        if (User.IsInRole("Staff"))
+                        {
+                            <li><a asp-controller="Room" asp-action="CreateRoom">✍️ Đăng phòng</a></li>
+                        }
+                        <li class="profile-dropdown">
+                            <a href="javascript:void(0);" class="profile-btn">
+                                
+                                <img id="menu-profile-image" src="@Url.Content(profileImage)" alt="Profile Image" style="width: 30px; height: 30px; border-radius: 50%;">
+                            </a>
+                            <ul class="dropdown-content">
+                                <li><a asp-controller="Account" asp-action="Profile">👤 Xem hồ sơ</a></li>
+                                <li>
+                                    <form asp-controller="Account" asp-action="Logout" method="post">
+                                        <button type="submit" style="background:none;border:none;padding:0;color:#337ab7;cursor:pointer;">
+                                            🔓 Đăng xuất
+                                        </button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <div class="main-container">
+            <section>
+                <div class="article-area">
+                    @if (Model != null && Model.Any())
+                    {
+                        @foreach (var room in Model)
+                        {
+                            <article>
+                                <a href="@Url.Action("Details", "Room", new { id = room.Id })">
+                                    <img src="@room.ImageUrl" alt="@room.Name">
+                                </a>
+                                <div class="article-container">
+                                    <h1><a href="@Url.Action("Details", "Room", new { id = room.Id })">@room.Name</a></h1>
+                                    <hr>
+                                    <h2>@room.Address</h2>
+                                    <p>@room.Description</p>
+                                </div>
+                            </article>
+                        }
+                    }
+                    else
+                    {
+                        <p>Không có phòng nào để hiển thị.</p>
+                    }
+                </div>
+                <div class="buttonArea">
+                    <a href="" class="btn">TẢI THÊM BÀI VIẾT</a>
+                </div>
+            </section>
+
+            <aside>
+                <!-- Asides for social media, search, and popular posts -->
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Footer content -->
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="~/js/navbar.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".menuBtn").click(function () {
+                $(".navBar").toggleClass("show");
+            });
+
+            $("#searchButton").click(function () {
+                const searchQuery = $("#searchInput").val().toLowerCase();
+                if (searchQuery) {
+                    if (searchQuery === "văn phòng trong ngày") {
+                        window.location.href = "~/gameDetails";
+                    } else if (searchQuery === "phòng họp") {
+                        window.location.href = "~/gameDetails1";
+                    } else if (searchQuery === "không gian làm việc chung") {
+                        window.location.href = "~/gameDetails6";
+                    } else if (searchQuery === "văn phòng ảo") {
+                        window.location.href = "~/gameDetails7";
+                    } else {
+                        window.location.href = `~/searchResults?search=${encodeURIComponent(searchQuery)}`;
+                    }
+                }
+            });
+        });
+    </script>
+    <script>
+        document.querySelector('.profile-btn').addEventListener('click', function () {
+            const dropdown = document.querySelector('.dropdown-content');
+            // Toggle the dropdown menu
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Ẩn dropdown khi click ra ngoài
+        window.onclick = function (event) {
+            if (!event.target.matches('#menu-profile-image')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === "block") {
+                        openDropdown.style.display = "none";
+                    }
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>
