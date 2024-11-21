@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity;
-
-namespace PODBookingSystem.Models
+﻿namespace PODBookingSystem.Models
 {
     public class User
     {
@@ -12,5 +10,7 @@ namespace PODBookingSystem.Models
 
         public string ProfileImage { get; set; }
         public string Title { get; set; }
+
+        public ICollection<Notification> Notifications { get; set; } = new List<Notification>();
     }
 }

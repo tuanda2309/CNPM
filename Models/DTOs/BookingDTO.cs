@@ -4,14 +4,16 @@ namespace PODBookingSystem.Models.DTOs
 {
     public class BookingDTO
     {
-        public int RoomId { get; set; } // ID của phòng
-        public int UserId { get; set; } // ID của người dùng
-        public DateTime StartTime { get; set; } // Thời gian bắt đầu
-        public DateTime EndTime { get; set; } // Thời gian kết thúc
-        public double TotalPrice { get; set; } // Tổng giá
-        public string Status { get; set; } // Trạng thái
-        public int? ServicePackageId { get; set; } // ID gói dịch vụ (nếu có)
-        public bool IsHourly { get; set; } // Kiểu đặt phòng (theo giờ hay gói dịch vụ)
-        public IEnumerable<SelectListItem> ServicePackageOptions { get; set; }
+        public int BookingId { get; set; }
+        public int RoomId { get; set; } 
+        public int CustomerId { get; set; } 
+        public DateTime StartTime { get; set; } 
+        public DateTime EndTime { get; set; } 
+        public double TotalPrice { get; set; } 
+        public int? ServicePackageId { get; set; } 
+        public string Status { get; set; } = "Pending"; 
+        public List<SelectListItem> ServicePackageOptions { get; set; } = new List<SelectListItem>();
+        public string? RoomName { get; set; }
+        public string? CustomerName { get; set; }
     }
 }

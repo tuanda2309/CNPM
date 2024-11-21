@@ -1,10 +1,11 @@
-﻿namespace PODBookingSystem.Models
+namespace PODBookingSystem.Models
 {
-    public class Booking
+    public class Bank
     {
         public int BookingId { get; set; } 
         public int? UserId { get; set; } 
         public int RoomId { get; set; } 
+        public int? ServicePackageId { get; set; } 
         public DateTime BookingDate { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }

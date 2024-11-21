@@ -2,10 +2,10 @@
 {
     public class Payment
     {
-        public int PaymentId { get; set; } // Khóa chính
-        public int BookingId { get; set; } // Khóa ngoại tham chiếu đến Booking
+        public int PaymentId { get; set; }
+        public int BookingId { get; set; }
         public double Amount { get; set; }
-        public string PaymentMethod { get; set; } // Thẻ tín dụng, PayPal, Ví điện tử
-        public string PaymentStatus { get; set; } // Đã thanh toán, Chờ thanh toán
+        public string PaymentMethod { get; set; }
+        public string PaymentStatus { get; set; }
     }
 }
