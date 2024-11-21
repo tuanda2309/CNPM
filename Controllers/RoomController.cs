@@ -1,29 +1,59 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PODBookingSystem.Models;
 using PODBookingSystem.Services;
 using PODBookingSystem.ViewModels;
-using System.IO;
-using System.Threading.Tasks;
 
 namespace PODBookingSystem.Controllers
 {
-    public class RoomController : Controller
+    [Route("api/[controller]")]
+    [ApiController]
+    public class RoomApiController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
-        private readonly IRoomService _roomService;
 
-        public RoomController(ApplicationDbContext context, IRoomService roomService)
+        public RoomApiController(ApplicationDbContext context)
         {
             _context = context;
-            _roomService = roomService;
         }
+
+        [HttpGet("PhongTrongNgayUrl")]
+        public IActionResult GetPhongTrongNgayUrl()
+        {
+            var url = Url.Action("PhongTrongNgay", "Room");
+            return Ok(new { url });
+        }
+
+        [HttpGet("PhongHopUrl")]
+        public IActionResult GetPhongHopUrl()
+        {
+            var url = Url.Action("PhongHop", "Room");
+            return Ok(new { url });
+        }
+
+        [HttpGet("PhongVipUrl")]
+        public IActionResult GetPhongVipUrl()
+        {
+            var url = Url.Action("Vip", "Room");
+            return Ok(new { url });
+        }
+
+    }
+        public class RoomController : Controller
+        {
+            private readonly ApplicationDbContext _context;
+            private readonly IRoomService _roomService;
+
+            public RoomController(ApplicationDbContext context, IRoomService roomService)
+            {
+                _context = context;
+                _roomService = roomService;
+            }
 
         [HttpGet]
         public IActionResult CreateRoom()
         {
-            return View();  // Trả về trang CreateRoom.cshtml
+            return View();  
         }
 
         [HttpPost]
@@ -39,8 +69,8 @@ namespace PODBookingSystem.Controllers
                 {
                     await model.ImageFile.CopyToAsync(fileStream);
                 }
-                model.ImageUrl = "/img/" + uniqueFileName;  // Gán đúng URL
-                Console.WriteLine("ImageUrl: " + model.ImageUrl);  // Kiểm tra URL
+                model.ImageUrl = "/img/" + uniqueFileName;  
+                Console.WriteLine("ImageUrl: " + model.ImageUrl);  
             }
             else
             {
@@ -48,40 +78,37 @@ namespace PODBookingSystem.Controllers
             }
             if (ModelState.IsValid)
             {
-                // Lưu thông tin phòng vào database
                 var room = new Room
                 {
                     Name = model.Name,
                     OwnerName = model.OwnerName,
                     DatePosted = model.DatePosted,
-                    Image = model.ImageUrl, // Đảm bảo ImageUrl được gán
+                    Image = model.ImageUrl, 
                     Location = model.Address,
+                    UserId = model.Id,
                     Description = model.Description,
-                    Price = model.Price, // Cập nhật giá phòng
-                    IsAvailable = true, // Mặc định phòng có sẵn
-                    CreatedBy = User.Identity.Name // Ghi nhận người tạo
+                    Price = model.Price, 
+                    IsAvailable = true, 
+                    CreatedBy = User.Identity.Name 
                 };
 
-                _context.Rooms.Add(room);  // Thêm phòng vào database
+                _context.Rooms.Add(room);  
                 await _context.SaveChangesAsync();
 
-                // Chuyển hướng đến trang SeeRoom sau khi submit thành công
                 return RedirectToAction("SeeRoom", "Room");
             }
 
-            // In ra các lỗi nếu có
             foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
             {
                 Console.WriteLine(error.ErrorMessage);
                 Console.WriteLine("ImageUrl: " + model.ImageUrl);
             }
 
-            return View("CreateRoom", model);  // Nếu không hợp lệ, quay lại form
+            return View("CreateRoom", model);  
         }
 
         public async Task<IActionResult> SeeRoom()
         {
-            // Lấy danh sách phòng từ database
             var rooms = await _context.Rooms
                 .Select(r => new RoomViewModel
                 {
@@ -93,15 +120,12 @@ namespace PODBookingSystem.Controllers
                     OwnerName = r.OwnerName
                 }).ToListAsync();
             var profileImage = User.FindFirst("ProfileImage")?.Value ?? "~/img/default_image_path.jpg";
-
-            // Truyền profileImage vào view
             ViewBag.ProfileImage = profileImage;
-            return View(rooms);  // Trả về trang SeeRoom.cshtml với danh sách phòng
+            return View(rooms); 
         }
 
         public IActionResult Details(int id)
         {
-            // Lấy chi tiết của một phòng từ database
             var room = _context.Rooms
                 .Where(r => r.RoomId == id)
                 .Select(r => new RoomViewModel
@@ -111,7 +135,8 @@ namespace PODBookingSystem.Controllers
                     Address = r.Location,
                     Description = r.Description,
                     ImageUrl = r.Image,
-                    OwnerName = r.OwnerName
+                    OwnerName = r.OwnerName,
+                    Price = r.Price
                 })
                 .FirstOrDefault();
 
@@ -120,29 +145,60 @@ namespace PODBookingSystem.Controllers
                 return NotFound();
             }
 
-            return View(room);  // Trả về trang Details.cshtml với thông tin chi tiết của phòng
+            return View(room);  
         }
-        /*public IActionResult Search(string name, double? price, TimeSpan? time)
+        public IActionResult PhongTrongNgay()
         {
-            var rooms = _context.Rooms.AsQueryable();
+            var room = new RoomViewModel { Name = "Văn phòng trong ngày" };  
+            return View("P", room);  
+        }
 
-            if (!string.IsNullOrEmpty(name))
-            {
-                rooms = rooms.Where(r => r.Name.Contains(name));
-            }
+        // Phòng họp
+        public IActionResult PhongHop()
+        {
+            var room = new RoomViewModel { Name = "Phòng Họp" };  
+            return View("P1", room);  
+        }
 
-            if (price.HasValue)
-            {
-                rooms = rooms.Where(r => r.Price <= price.Value);
-            }
+        // Phòng VIP
+        public IActionResult Vip()
+        {
+            var room = new RoomViewModel { Name = "Phòng VIP" };  
+            return View("Vip", room);  
+        }
 
-            if (time.HasValue)
-            {
-                rooms = rooms.Where(r => r.AvailableFrom <= time && r.AvailableTo >= time);
-            }
+        // Phòng 1
+        public IActionResult Phong1()
+        {
+            var room = new RoomViewModel { Name = "Phòng 1" };  
+            return View("Phong1", room);  
+        }
 
-            return View("SeeRoom", rooms.ToList());
-        }*/
+        // Phòng 2
+        public IActionResult Phong2()
+        {
+            var room = new RoomViewModel { Name = "Phòng 2" };  
+            return View("Phong2", room);
+        }
+        // Phòng 3
+        public IActionResult Phong3()
+        {
+            var room = new RoomViewModel { Name = "Phòng 3" };  
+            return View("Phong3", room);
+        }
+        // Phòng 4
+        public IActionResult Phong4()
+        {
+            var room = new RoomViewModel { Name = "Phòng 4" };  
+            return View("Phong4", room);
+        }
+
+        // Trang lỗi 404 tùy chỉnh
+        [Route("Room/404")]
+        public IActionResult NotFoundPage()
+        {
+            return View("404");
+        }
 
     }
 }

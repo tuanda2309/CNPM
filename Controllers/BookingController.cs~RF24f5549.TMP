@@ -121,11 +121,12 @@ namespace PODBookingSystem.Controllers
                 _context.Bookings.Update(booking);
                 await _context.SaveChangesAsync();
 
+                // Tạo thông báo dựa trên trạng thái mới
                 if (newStatus == "Confirmed")
                 {
                     var notification = new Notification
                     {
-                        UserId = (int)booking.UserId, 
+                        UserId = (int)booking.UserId, // ID của khách hàng
                         Title = "Thông báo đặt phòng",
                         Message = "Phòng bạn đặt thành công.",
                         CreatedAt = DateTime.Now
@@ -136,7 +137,7 @@ namespace PODBookingSystem.Controllers
                 {
                     var notification = new Notification
                     {
-                        UserId = (int)booking.UserId, 
+                        UserId = (int)booking.UserId, // ID của khách hàng
                         Title = "Thông báo đặt phòng",
                         Message = "Phòng bạn đã bị hủy.",
                         CreatedAt = DateTime.Now

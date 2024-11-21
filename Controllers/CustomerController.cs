@@ -36,16 +36,6 @@ namespace PODBookingSystem.Controllers
             return View(userProfile);
         }
 
-        [HttpPost]
-        public IActionResult PurchaseServicePackage(ServicePackage package)
-        {
-            if (ModelState.IsValid)
-            {
-                _customerService.PurchasePackage(package);
-                return RedirectToAction("ViewProfile");
-            }
-            return View(package);
-        }
 
         public IActionResult ViewBookingHistory()
         {

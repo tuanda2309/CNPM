@@ -1,12 +1,12 @@
-﻿using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Authentication;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.AspNetCore.Mvc;
-using PODBookingSystem.Services;
-using System.Security.Claims;
-using PODBookingSystem.ViewModels;
-using PODBookingSystem.Models;
-using Microsoft.Extensions.Hosting.Internal;
 using Microsoft.EntityFrameworkCore;
+using PODBookingSystem.Models;
+using PODBookingSystem.Services;
+using PODBookingSystem.ViewModels;
+using System.Security.Claims;
 
 
 public class AccountController : Controller
@@ -30,32 +30,28 @@ public class AccountController : Controller
         return View(new RegisterViewModel());
     }
 
-    // POST: Account/Register
+    
     [HttpPost]
     public async Task<IActionResult> Register(RegisterViewModel model)
     {
         if (ModelState.IsValid)
         {
-            // Tạo một đối tượng User mới
             var user = new User
             {
                 Name = model.Username,
                 Email = model.Email,
-                Password = model.Password, // Không hash mật khẩu
-                Role = "Customer", // Gán vai trò mặc định là Customer
+                Password = model.Password, 
+                Role = "Customer", 
                 ProfileImage = "~/img/default_image_path.jpg",
                 Title = model.Title
             };
 
-            // Lưu vào database
             _context.Users.Add(user);
-            await _context.SaveChangesAsync(); // Lưu thay đổi vào cơ sở dữ liệu
+            await _context.SaveChangesAsync(); 
 
-            // Điều hướng đến trang đăng nhập sau khi đăng ký thành công
             return RedirectToAction("Login", "Account");
         }
 
-        // Nếu có lỗi, trả về lại view với model
         return View(model);
     }
 
@@ -68,15 +64,36 @@ public class AccountController : Controller
     [HttpPost]
     public async Task<IActionResult> Login(string email, string password)
     {
-        // Tìm user theo email
+        if (string.IsNullOrEmpty(email))
+        {
+            ModelState.AddModelError("Email", "Vui lòng nhập email");
+        }
+        if (string.IsNullOrEmpty(password))
+        {
+            ModelState.AddModelError("Password", "Vui lòng nhập mật khẩu");
+        }
+        if (!ModelState.IsValid)
+        {
+            return View();
+        }
         var user = _context.Users.FirstOrDefault(u => u.Email == email);
 
-        // Kiểm tra mật khẩu không hash
+        if (user == null)
+        {
+            TempData["EmailErrorMessage"] = "Email không tồn tại";
+            return View();
+        }
+
+        if (user.Password != password)
+        {
+            TempData["PasswordErrorMessage"] = "Mật khẩu không chính xác";
+            return View();
+        }
         if (user != null && user.Password == password)
         {
             var claims = new List<Claim>
             {
-                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()), // Claim chứa UserId
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()), 
                 new Claim(ClaimTypes.Name, user.Name),
                 new Claim(ClaimTypes.Email, user.Email),
                 new Claim(ClaimTypes.Role, user.Role),
@@ -92,37 +109,31 @@ public class AccountController : Controller
 
             await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
 
-            // Điều hướng dựa trên vai trò
             if (user.Role == "Admin")
                 return RedirectToAction("Dashboard", "Admin");
-            else if (user.Role == "Manager")
-                return RedirectToAction("Dashboard", "Manager");
             else
-                return RedirectToAction("Index", "Home"); // Điều hướng đến trang chủ cho Customer
+                return RedirectToAction("Index", "Home"); 
         }
 
-        ViewBag.ErrorMessage = "Email hoặc mật khẩu không chính xác!";
+        TempData["ErrorMessage"] = "Thông tin đăng nhập không hợp lệ";
         return View();
     }
 
-   [HttpGet]
+    [HttpGet]
     public IActionResult Profile()
     {
         if (User.Identity.IsAuthenticated)
         {
-            // Lấy ID người dùng từ Claims
             var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
 
             if (int.TryParse(userId, out int parsedUserId))
             {
-                // Lấy dữ liệu người dùng từ dịch vụ
                 var user = _userService.GetUserById(parsedUserId);
 
                 if (user == null)
                 {
-                    return RedirectToAction("Error");  // Chuyển hướng nếu không tìm thấy người dùng
+                    return RedirectToAction("Error");  
                 }
-                // Chuyển đổi dữ liệu sang ProfileViewModel
                 var model = new ProfileViewModel
                 {
                     Username = user.Name,
@@ -130,14 +141,11 @@ public class AccountController : Controller
                     Image = user.ProfileImage,
                     Title = user.Title,
                     Role = user.Role,
-                    //BookedRooms = _roomService.GetBookedRoomsByUserId(parsedUserId)
                 };
 
-                return View(model);  // Trả về view với model ProfileViewModel
+                return View(model);
             }
         }
-
-        // Nếu không đăng nhập hoặc không lấy được ID
         return RedirectToAction("Login", "Account");
     }
 
@@ -159,7 +167,6 @@ public class AccountController : Controller
         user.Name = model.Username;
         user.Title = model.Title;
 
-        // Xử lý tải lên file ảnh
         if (model.ImageFile != null && model.ImageFile.Length > 0)
         {
             var fileName = Path.GetFileName(model.ImageFile.FileName);
@@ -186,4 +193,75 @@ public class AccountController : Controller
         HttpContext.SignOutAsync();
         return RedirectToAction("Index", "Home");
     }
+    [HttpGet]
+    public IActionResult LoginWithGoogle(string returnUrl = null)
+    {
+        var redirectUrl = Url.Action("GoogleResponse", "Account", new { returnUrl });
+        var properties = new AuthenticationProperties { RedirectUri = redirectUrl };
+        return Challenge(properties, GoogleDefaults.AuthenticationScheme);
+    }
+    [HttpGet]
+    public async Task<IActionResult> GoogleResponse()
+    {
+        var result = await HttpContext.AuthenticateAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+        if (!result.Succeeded)
+        {
+            return RedirectToAction("Login");
+        }
+
+        var email = result.Principal.FindFirst(ClaimTypes.Email)?.Value;
+        var name = result.Principal.FindFirst(ClaimTypes.Name)?.Value;
+
+        if (string.IsNullOrEmpty(email))
+        {
+            TempData["ErrorMessage"] = "Không thể lấy thông tin email từ Google.";
+            return RedirectToAction("Login");
+        }
+
+        if (string.IsNullOrEmpty(name))
+        {
+            TempData["ErrorMessage"] = "Tên không được để trống, vui lòng nhập tên của bạn.";
+            return RedirectToAction("CompleteProfile", new { email = email });
+        }
+
+        var existingUser = await _context.Users
+            .Where(u => u.Email.Trim().ToLower() == email.Trim().ToLower())
+            .FirstOrDefaultAsync();
+
+        User user;
+        if (existingUser == null)
+        {
+            user = new User
+            {
+                Email = email,
+                Name = name,
+                Role = "Customer",
+                ProfileImage = "~/img/default_image_path.jpg",
+                Password = "123456",  
+                Title = "Chào mừng bạn"
+            };
+            _context.Users.Add(user);
+            await _context.SaveChangesAsync();
+        }
+        else
+        {
+            user = existingUser;
+        }
+
+        await _context.SaveChangesAsync();
+
+        var claims = new List<Claim>
+    {
+        new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+        new Claim(ClaimTypes.Name, user.Name),
+        new Claim(ClaimTypes.Email, user.Email),
+        new Claim(ClaimTypes.Role, user.Role)
+    };
+
+        var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+        await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
+
+        return RedirectToAction("Index", "Home");
+    }
+
 }
