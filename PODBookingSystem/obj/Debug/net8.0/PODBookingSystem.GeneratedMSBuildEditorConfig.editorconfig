@@ -1,0 +1,179 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = PODBookingSystem
+build_property.RootNamespace = PODBookingSystem
+build_property.ProjectDir = D:\code\cnpm\PODBookingSystem\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\code\cnpm\PODBookingSystem
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/code/cnpm/PODBookingSystem/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/code/cnpm/PODBookingSystem/Views/Account/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/code/cnpm/PODBookingSystem/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/code/cnpm/PODBookingSystem/Views/Admin/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGFzaGJvYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/code/cnpm/PODBookingSystem/Views/Admin/ProfileAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUHJvZmlsZUFkbWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/code/cnpm/PODBookingSystem/Views/Admin/ProfileUsers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUHJvZmlsZVVzZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/code/cnpm/PODBookingSystem/Views/Admin/Revenue.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUmV2ZW51ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/code/cnpm/PODBookingSystem/Views/Admin/Rooms.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUm9vbXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/code/cnpm/PODBookingSystem/Views/Booking/BookingSuccess.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ1xCb29raW5nU3VjY2Vzcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/code/cnpm/PODBookingSystem/Views/Booking/CreateBooking.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ1xDcmVhdGVCb29raW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/code/cnpm/PODBookingSystem/Views/Booking/ManageBookings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ1xNYW5hZ2VCb29raW5ncy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/code/cnpm/PODBookingSystem/Views/Calendar/Calendar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsZW5kYXJcQ2FsZW5kYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/code/cnpm/PODBookingSystem/Views/Checkout/PaymentCallBack.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hlY2tvdXRcUGF5bWVudENhbGxCYWNrLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/code/cnpm/PODBookingSystem/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/code/cnpm/PODBookingSystem/Views/Notification/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90aWZpY2F0aW9uXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/code/cnpm/PODBookingSystem/Views/Payment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/code/cnpm/PODBookingSystem/Views/Payment/PaymentSuccess.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudFxQYXltZW50U3VjY2Vzcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/code/cnpm/PODBookingSystem/Views/Room/404.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9vbVw0MDQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/code/cnpm/PODBookingSystem/Views/Room/CreateRoom.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9vbVxDcmVhdGVSb29tLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/code/cnpm/PODBookingSystem/Views/Room/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9vbVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/code/cnpm/PODBookingSystem/Views/Room/P.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9vbVxQLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/code/cnpm/PODBookingSystem/Views/Room/P1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9vbVxQMS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/code/cnpm/PODBookingSystem/Views/Room/Phong1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9vbVxQaG9uZzEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/code/cnpm/PODBookingSystem/Views/Room/Phong2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9vbVxQaG9uZzIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/code/cnpm/PODBookingSystem/Views/Room/Phong3.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9vbVxQaG9uZzMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/code/cnpm/PODBookingSystem/Views/Room/Phong4.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9vbVxQaG9uZzQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/code/cnpm/PODBookingSystem/Views/Room/SeeRoom.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9vbVxTZWVSb29tLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/code/cnpm/PODBookingSystem/Views/Room/Success.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9vbVxTdWNjZXNzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/code/cnpm/PODBookingSystem/Views/Room/Vip.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9vbVxWaXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/code/cnpm/PODBookingSystem/Views/ServicePackage/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVBhY2thZ2VcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/code/cnpm/PODBookingSystem/Views/ServicePackage/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVBhY2thZ2VcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/code/cnpm/PODBookingSystem/Views/Service/Service.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxTZXJ2aWNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/code/cnpm/PODBookingSystem/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/code/cnpm/PODBookingSystem/Views/Shared/_NotificationList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ob3RpZmljYXRpb25MaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/code/cnpm/PODBookingSystem/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/code/cnpm/PODBookingSystem/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/code/cnpm/PODBookingSystem/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/code/cnpm/PODBookingSystem/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-wsq37ixxqh

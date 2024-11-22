@@ -1,0 +1,765 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PODBookingSystem.bundle.scp.css",
+      "PackagePath": "staticwebassets\\PODBookingSystem.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\css\\404.css",
+      "PackagePath": "staticwebassets\\css\\404.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\css\\V.css",
+      "PackagePath": "staticwebassets\\css\\V.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\css\\calendar.css",
+      "PackagePath": "staticwebassets\\css\\calendar.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\css\\components\\articles.css",
+      "PackagePath": "staticwebassets\\css\\components\\articles.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\css\\components\\aside.css",
+      "PackagePath": "staticwebassets\\css\\components\\aside.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\css\\components\\banner.css",
+      "PackagePath": "staticwebassets\\css\\components\\banner.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\css\\components\\base.css",
+      "PackagePath": "staticwebassets\\css\\components\\base.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\css\\components\\error-box.css",
+      "PackagePath": "staticwebassets\\css\\components\\error-box.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\css\\components\\footer.css",
+      "PackagePath": "staticwebassets\\css\\components\\footer.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\css\\components\\header.css",
+      "PackagePath": "staticwebassets\\css\\components\\header.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\css\\components\\podbk.css",
+      "PackagePath": "staticwebassets\\css\\components\\podbk.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\css\\dashboard.css",
+      "PackagePath": "staticwebassets\\css\\dashboard.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\css\\dropdown.css",
+      "PackagePath": "staticwebassets\\css\\dropdown.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\css\\home.css",
+      "PackagePath": "staticwebassets\\css\\home.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\css\\lease.css",
+      "PackagePath": "staticwebassets\\css\\lease.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\css\\login_register_edit_create.css",
+      "PackagePath": "staticwebassets\\css\\login_register_edit_create.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\css\\notification-container.css",
+      "PackagePath": "staticwebassets\\css\\notification-container.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\css\\notificationDetails.css",
+      "PackagePath": "staticwebassets\\css\\notificationDetails.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\css\\podbking.css",
+      "PackagePath": "staticwebassets\\css\\podbking.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\css\\profile.css",
+      "PackagePath": "staticwebassets\\css\\profile.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\css\\profileAdmin.css",
+      "PackagePath": "staticwebassets\\css\\profileAdmin.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\css\\profileUsers.css",
+      "PackagePath": "staticwebassets\\css\\profileUsers.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\css\\revenue.css",
+      "PackagePath": "staticwebassets\\css\\revenue.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\css\\rooms.css",
+      "PackagePath": "staticwebassets\\css\\rooms.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\css\\service.css",
+      "PackagePath": "staticwebassets\\css\\service.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\css\\styles.css",
+      "PackagePath": "staticwebassets\\css\\styles.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\css\\success.css",
+      "PackagePath": "staticwebassets\\css\\success.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\css\\vip.css",
+      "PackagePath": "staticwebassets\\css\\vip.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\054205001268_NguyenVoDangKhoa_Go_Ban_Phim.jpg",
+      "PackagePath": "staticwebassets\\img\\054205001268_NguyenVoDangKhoa_Go_Ban_Phim.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\0a52fdf4-139a-41ea-9a69-dcd04b779fbc_777bf8fa-5961-4f97-97ec-f5218e367432_p28.jpg",
+      "PackagePath": "staticwebassets\\img\\0a52fdf4-139a-41ea-9a69-dcd04b779fbc_777bf8fa-5961-4f97-97ec-f5218e367432_p28.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\17ee20ee-099d-4e0b-a0bc-a74bd1720b72_MU.jpg",
+      "PackagePath": "staticwebassets\\img\\17ee20ee-099d-4e0b-a0bc-a74bd1720b72_MU.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\2cda5cfe-e80d-40cf-aade-e19f88211aac_MU.jpg",
+      "PackagePath": "staticwebassets\\img\\2cda5cfe-e80d-40cf-aade-e19f88211aac_MU.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\2dfc81b8-3731-41f6-b54b-8a5854e2265d_tải xuống1.jfif",
+      "PackagePath": "staticwebassets\\img\\2dfc81b8-3731-41f6-b54b-8a5854e2265d_tải xuống1.jfif"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\30771e6f-d120-4471-826f-227ab4788d14_3f8ce30e-cf1c-4921-ac98-59eb59b61e04_ba4baff4-616e-4022-b900-ef996c5470c7_background1.jpg",
+      "PackagePath": "staticwebassets\\img\\30771e6f-d120-4471-826f-227ab4788d14_3f8ce30e-cf1c-4921-ac98-59eb59b61e04_ba4baff4-616e-4022-b900-ef996c5470c7_background1.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\31f94b6e-3604-4fd7-a4c3-7d62dd159b11_695caf68-3338-4347-be48-c279aa210458_3f8ce30e-cf1c-4921-ac98-59eb59b61e04_ba4baff4-616e-4022-b900-ef996c5470c7_background1.jpg",
+      "PackagePath": "staticwebassets\\img\\31f94b6e-3604-4fd7-a4c3-7d62dd159b11_695caf68-3338-4347-be48-c279aa210458_3f8ce30e-cf1c-4921-ac98-59eb59b61e04_ba4baff4-616e-4022-b900-ef996c5470c7_background1.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\3cf37df7-9d23-40ff-bd2e-e1c93c0d2548_777bf8fa-5961-4f97-97ec-f5218e367432_p28.jpg",
+      "PackagePath": "staticwebassets\\img\\3cf37df7-9d23-40ff-bd2e-e1c93c0d2548_777bf8fa-5961-4f97-97ec-f5218e367432_p28.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\3f8ce30e-cf1c-4921-ac98-59eb59b61e04_ba4baff4-616e-4022-b900-ef996c5470c7_background1.jpg",
+      "PackagePath": "staticwebassets\\img\\3f8ce30e-cf1c-4921-ac98-59eb59b61e04_ba4baff4-616e-4022-b900-ef996c5470c7_background1.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\48be89d1-d5b9-4854-8bdb-5f7ef8e835a5_MU.jpg",
+      "PackagePath": "staticwebassets\\img\\48be89d1-d5b9-4854-8bdb-5f7ef8e835a5_MU.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\49b52c83-e180-4821-b2f0-72be79ae1217_3f8ce30e-cf1c-4921-ac98-59eb59b61e04_ba4baff4-616e-4022-b900-ef996c5470c7_background1.jpg",
+      "PackagePath": "staticwebassets\\img\\49b52c83-e180-4821-b2f0-72be79ae1217_3f8ce30e-cf1c-4921-ac98-59eb59b61e04_ba4baff4-616e-4022-b900-ef996c5470c7_background1.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\4bea6e57-0496-47d7-bde2-042c619a2093_3f8ce30e-cf1c-4921-ac98-59eb59b61e04_ba4baff4-616e-4022-b900-ef996c5470c7_background1.jpg",
+      "PackagePath": "staticwebassets\\img\\4bea6e57-0496-47d7-bde2-042c619a2093_3f8ce30e-cf1c-4921-ac98-59eb59b61e04_ba4baff4-616e-4022-b900-ef996c5470c7_background1.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\695caf68-3338-4347-be48-c279aa210458_3f8ce30e-cf1c-4921-ac98-59eb59b61e04_ba4baff4-616e-4022-b900-ef996c5470c7_background1.jpg",
+      "PackagePath": "staticwebassets\\img\\695caf68-3338-4347-be48-c279aa210458_3f8ce30e-cf1c-4921-ac98-59eb59b61e04_ba4baff4-616e-4022-b900-ef996c5470c7_background1.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\777bf8fa-5961-4f97-97ec-f5218e367432_p28 (2).jpg",
+      "PackagePath": "staticwebassets\\img\\777bf8fa-5961-4f97-97ec-f5218e367432_p28 (2).jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\777bf8fa-5961-4f97-97ec-f5218e367432_p28.jpg",
+      "PackagePath": "staticwebassets\\img\\777bf8fa-5961-4f97-97ec-f5218e367432_p28.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\88b70fe4-3905-4f3b-97b3-0254809e97f4_777bf8fa-5961-4f97-97ec-f5218e367432_p28.jpg",
+      "PackagePath": "staticwebassets\\img\\88b70fe4-3905-4f3b-97b3-0254809e97f4_777bf8fa-5961-4f97-97ec-f5218e367432_p28.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\8b72cba1-8c6c-4016-a2b3-2b742d5a9ff9_777bf8fa-5961-4f97-97ec-f5218e367432_p28.jpg",
+      "PackagePath": "staticwebassets\\img\\8b72cba1-8c6c-4016-a2b3-2b742d5a9ff9_777bf8fa-5961-4f97-97ec-f5218e367432_p28.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\9519e33a-73cd-49db-b271-5968217cb9c7_3f8ce30e-cf1c-4921-ac98-59eb59b61e04_ba4baff4-616e-4022-b900-ef996c5470c7_background1.jpg",
+      "PackagePath": "staticwebassets\\img\\9519e33a-73cd-49db-b271-5968217cb9c7_3f8ce30e-cf1c-4921-ac98-59eb59b61e04_ba4baff4-616e-4022-b900-ef996c5470c7_background1.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\976852b7-6529-4f5c-aec3-8e1aab49234f_MU.jpg",
+      "PackagePath": "staticwebassets\\img\\976852b7-6529-4f5c-aec3-8e1aab49234f_MU.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\9a96456d-3555-4d90-899f-3b89042c75a2_3f8ce30e-cf1c-4921-ac98-59eb59b61e04_ba4baff4-616e-4022-b900-ef996c5470c7_background1.jpg",
+      "PackagePath": "staticwebassets\\img\\9a96456d-3555-4d90-899f-3b89042c75a2_3f8ce30e-cf1c-4921-ac98-59eb59b61e04_ba4baff4-616e-4022-b900-ef996c5470c7_background1.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\9cb447e5-3e81-4220-9ac2-b558fe55f0b2_MU.jpg",
+      "PackagePath": "staticwebassets\\img\\9cb447e5-3e81-4220-9ac2-b558fe55f0b2_MU.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\9cce1a4b-951a-4a3d-940c-10e2febc1489_tải xuống1.jfif",
+      "PackagePath": "staticwebassets\\img\\9cce1a4b-951a-4a3d-940c-10e2febc1489_tải xuống1.jfif"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\Ho_Oh.png",
+      "PackagePath": "staticwebassets\\img\\Ho_Oh.png"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\M8.png",
+      "PackagePath": "staticwebassets\\img\\M8.png"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\MU.jpg",
+      "PackagePath": "staticwebassets\\img\\MU.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\a3158469-2d76-490d-afc5-fe8f756a321a_MU.jpg",
+      "PackagePath": "staticwebassets\\img\\a3158469-2d76-490d-afc5-fe8f756a321a_MU.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\a32eb120-ad31-4ddd-98fc-e6a5bb215529_3f8ce30e-cf1c-4921-ac98-59eb59b61e04_ba4baff4-616e-4022-b900-ef996c5470c7_background1.jpg",
+      "PackagePath": "staticwebassets\\img\\a32eb120-ad31-4ddd-98fc-e6a5bb215529_3f8ce30e-cf1c-4921-ac98-59eb59b61e04_ba4baff4-616e-4022-b900-ef996c5470c7_background1.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\a63d58fa-5f49-4a5c-90cf-436715c5b4ee_MU.jpg",
+      "PackagePath": "staticwebassets\\img\\a63d58fa-5f49-4a5c-90cf-436715c5b4ee_MU.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\b85203f0-9240-421c-9bcb-37e327f325a1_3f8ce30e-cf1c-4921-ac98-59eb59b61e04_ba4baff4-616e-4022-b900-ef996c5470c7_background1.jpg",
+      "PackagePath": "staticwebassets\\img\\b85203f0-9240-421c-9bcb-37e327f325a1_3f8ce30e-cf1c-4921-ac98-59eb59b61e04_ba4baff4-616e-4022-b900-ef996c5470c7_background1.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\ba4baff4-616e-4022-b900-ef996c5470c7_background1.jpg",
+      "PackagePath": "staticwebassets\\img\\ba4baff4-616e-4022-b900-ef996c5470c7_background1.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\background.png",
+      "PackagePath": "staticwebassets\\img\\background.png"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\background1.jpg",
+      "PackagePath": "staticwebassets\\img\\background1.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\background2.jpg",
+      "PackagePath": "staticwebassets\\img\\background2.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\background3.gif",
+      "PackagePath": "staticwebassets\\img\\background3.gif"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\banner1.jpg",
+      "PackagePath": "staticwebassets\\img\\banner1.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\banner2.png",
+      "PackagePath": "staticwebassets\\img\\banner2.png"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\banner3.jpg",
+      "PackagePath": "staticwebassets\\img\\banner3.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\bg.png",
+      "PackagePath": "staticwebassets\\img\\bg.png"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\bg2.png",
+      "PackagePath": "staticwebassets\\img\\bg2.png"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\c4a741cc-ef89-420f-97fe-6fce7d38a1cf_MU.jpg",
+      "PackagePath": "staticwebassets\\img\\c4a741cc-ef89-420f-97fe-6fce7d38a1cf_MU.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\d22f7f67-ab59-47fc-bd49-7a7f81d44afc_777bf8fa-5961-4f97-97ec-f5218e367432_p28.jpg",
+      "PackagePath": "staticwebassets\\img\\d22f7f67-ab59-47fc-bd49-7a7f81d44afc_777bf8fa-5961-4f97-97ec-f5218e367432_p28.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\dbf8a4dc-3942-43f4-a556-3859e5bf2946_MU.jpg",
+      "PackagePath": "staticwebassets\\img\\dbf8a4dc-3942-43f4-a556-3859e5bf2946_MU.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\default_image_path.jpg",
+      "PackagePath": "staticwebassets\\img\\default_image_path.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\e1c1afc8-091b-45ef-b33d-cf69eb656af3_MU.jpg",
+      "PackagePath": "staticwebassets\\img\\e1c1afc8-091b-45ef-b33d-cf69eb656af3_MU.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\e3b26009-4a78-4420-bf2c-7e7dd7bb2d2a_Ho_Oh.png",
+      "PackagePath": "staticwebassets\\img\\e3b26009-4a78-4420-bf2c-7e7dd7bb2d2a_Ho_Oh.png"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\eaecbbbc-5134-4c39-94a7-48ce600d43da_777bf8fa-5961-4f97-97ec-f5218e367432_p28.jpg",
+      "PackagePath": "staticwebassets\\img\\eaecbbbc-5134-4c39-94a7-48ce600d43da_777bf8fa-5961-4f97-97ec-f5218e367432_p28.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\f50ca710-1b98-4918-829a-aaf178320e0b_background1.jpg",
+      "PackagePath": "staticwebassets\\img\\f50ca710-1b98-4918-829a-aaf178320e0b_background1.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\f87d5e35-7f38-4453-895a-be194690b393_777bf8fa-5961-4f97-97ec-f5218e367432_p28.jpg",
+      "PackagePath": "staticwebassets\\img\\f87d5e35-7f38-4453-895a-be194690b393_777bf8fa-5961-4f97-97ec-f5218e367432_p28.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\icon_google.png",
+      "PackagePath": "staticwebassets\\img\\icon_google.png"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\logo.ico",
+      "PackagePath": "staticwebassets\\img\\logo.ico"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\logo.png",
+      "PackagePath": "staticwebassets\\img\\logo.png"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\logo2.png",
+      "PackagePath": "staticwebassets\\img\\logo2.png"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\p10.jpg",
+      "PackagePath": "staticwebassets\\img\\p10.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\p11.jpg",
+      "PackagePath": "staticwebassets\\img\\p11.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\p12.jpg",
+      "PackagePath": "staticwebassets\\img\\p12.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\p13.jpg",
+      "PackagePath": "staticwebassets\\img\\p13.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\p14.jpg",
+      "PackagePath": "staticwebassets\\img\\p14.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\p15.jpg",
+      "PackagePath": "staticwebassets\\img\\p15.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\p16.jpg",
+      "PackagePath": "staticwebassets\\img\\p16.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\p17.jpg",
+      "PackagePath": "staticwebassets\\img\\p17.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\p18.jpg",
+      "PackagePath": "staticwebassets\\img\\p18.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\p19.jpg",
+      "PackagePath": "staticwebassets\\img\\p19.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\p2.jpg",
+      "PackagePath": "staticwebassets\\img\\p2.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\p20.jpg",
+      "PackagePath": "staticwebassets\\img\\p20.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\p21.jpg",
+      "PackagePath": "staticwebassets\\img\\p21.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\p22.jpg",
+      "PackagePath": "staticwebassets\\img\\p22.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\p23.jpg",
+      "PackagePath": "staticwebassets\\img\\p23.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\p24.jpg",
+      "PackagePath": "staticwebassets\\img\\p24.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\p25.jpg",
+      "PackagePath": "staticwebassets\\img\\p25.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\p26.jpg",
+      "PackagePath": "staticwebassets\\img\\p26.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\p27.jpg",
+      "PackagePath": "staticwebassets\\img\\p27.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\p28.jpg",
+      "PackagePath": "staticwebassets\\img\\p28.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\p3.jpg",
+      "PackagePath": "staticwebassets\\img\\p3.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\p4.jpg",
+      "PackagePath": "staticwebassets\\img\\p4.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\p5.jpg",
+      "PackagePath": "staticwebassets\\img\\p5.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\p6.jpg",
+      "PackagePath": "staticwebassets\\img\\p6.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\p7.jpg",
+      "PackagePath": "staticwebassets\\img\\p7.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\p8.jpg",
+      "PackagePath": "staticwebassets\\img\\p8.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\p9.jpg",
+      "PackagePath": "staticwebassets\\img\\p9.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\pay.jpg",
+      "PackagePath": "staticwebassets\\img\\pay.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\profil-logo.jpg",
+      "PackagePath": "staticwebassets\\img\\profil-logo.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\tải xuống1.jfif",
+      "PackagePath": "staticwebassets\\img\\tải xuống1.jfif"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\vip-room1.jpg",
+      "PackagePath": "staticwebassets\\img\\vip-room1.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\vip-room2.jpg",
+      "PackagePath": "staticwebassets\\img\\vip-room2.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\vip-room3.jpg",
+      "PackagePath": "staticwebassets\\img\\vip-room3.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\img\\vip-room4.jpg",
+      "PackagePath": "staticwebassets\\img\\vip-room4.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\js\\Chart.js",
+      "PackagePath": "staticwebassets\\js\\Chart.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\js\\V.js",
+      "PackagePath": "staticwebassets\\js\\V.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\js\\app.js",
+      "PackagePath": "staticwebassets\\js\\app.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\js\\navbar.js",
+      "PackagePath": "staticwebassets\\js\\navbar.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\js\\notification.js",
+      "PackagePath": "staticwebassets\\js\\notification.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\js\\payment.js",
+      "PackagePath": "staticwebassets\\js\\payment.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\js\\payment1.js",
+      "PackagePath": "staticwebassets\\js\\payment1.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\js\\profile.js",
+      "PackagePath": "staticwebassets\\js\\profile.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\js\\profileAdmin.js",
+      "PackagePath": "staticwebassets\\js\\profileAdmin.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\js\\profileHeader.js",
+      "PackagePath": "staticwebassets\\js\\profileHeader.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\js\\profileUsers.js",
+      "PackagePath": "staticwebassets\\js\\profileUsers.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\js\\rooms.js",
+      "PackagePath": "staticwebassets\\js\\rooms.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\js\\script.js",
+      "PackagePath": "staticwebassets\\js\\script.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\video\\video1.mp4",
+      "PackagePath": "staticwebassets\\video\\video1.mp4"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\video\\video2.mp4",
+      "PackagePath": "staticwebassets\\video\\video2.mp4"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\video\\video3.mp4",
+      "PackagePath": "staticwebassets\\video\\video3.mp4"
+    },
+    {
+      "Id": "D:\\Visual Studio Code Tuan\\Web\\cnpm\\PODBookingSystem\\wwwroot\\video\\video4.mp4",
+      "PackagePath": "staticwebassets\\video\\video4.mp4"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.PODBookingSystem.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.PODBookingSystem.props",
+      "PackagePath": "build\\PODBookingSystem.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.PODBookingSystem.props",
+      "PackagePath": "buildMultiTargeting\\PODBookingSystem.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.PODBookingSystem.props",
+      "PackagePath": "buildTransitive\\PODBookingSystem.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

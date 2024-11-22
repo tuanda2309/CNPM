@@ -1,0 +1,22 @@
+[
+  {
+    "ContainingType": "PODBookingSystem.Controllers.RoomApiController",
+    "Method": "GetPhongHopUrl",
+    "RelativePath": "api/RoomApi/PhongHopUrl",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PODBookingSystem.Controllers.RoomApiController",
+    "Method": "GetPhongTrongNgayUrl",
+    "RelativePath": "api/RoomApi/PhongTrongNgayUrl",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
