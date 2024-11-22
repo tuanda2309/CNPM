@@ -1,0 +1,107 @@
+D:\code\cnpm\POD Booking System\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.csproj.AssemblyReference.cache
+D:\code\cnpm\POD Booking System\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\code\cnpm\POD Booking System\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.AssemblyInfoInputs.cache
+D:\code\cnpm\POD Booking System\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.AssemblyInfo.cs
+D:\code\cnpm\POD Booking System\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.csproj.CoreCompileInputs.cache
+D:\code\cnpm\PODBooking.Services\bin\Debug\net8.0\appsettings.Development.json
+D:\code\cnpm\PODBooking.Services\bin\Debug\net8.0\appsettings.json
+D:\code\cnpm\PODBooking.Services\bin\Debug\net8.0\PODBooking.Services.deps.json
+D:\code\cnpm\PODBooking.Services\bin\Debug\net8.0\PODBooking.Services.dll
+D:\code\cnpm\PODBooking.Services\bin\Debug\net8.0\PODBooking.Services.pdb
+D:\code\cnpm\PODBooking.Services\bin\Debug\net8.0\PODBooking.Repositories.dll
+D:\code\cnpm\PODBooking.Services\bin\Debug\net8.0\PODBooking.Repositories.pdb
+D:\code\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.csproj.AssemblyReference.cache
+D:\code\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\code\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.AssemblyInfoInputs.cache
+D:\code\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.AssemblyInfo.cs
+D:\code\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.csproj.CoreCompileInputs.cache
+D:\code\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooki.49329C2C.Up2Date
+D:\code\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.dll
+D:\code\cnpm\PODBooking.Services\obj\Debug\net8.0\refint\PODBooking.Services.dll
+D:\code\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.pdb
+D:\code\cnpm\PODBooking.Services\obj\Debug\net8.0\ref\PODBooking.Services.dll
+D:\Visual Studio Code Tuan\Web\cnpm\cnpm\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.dll
+D:\Visual Studio Code Tuan\Web\cnpm\cnpm\cnpm\PODBooking.Services\obj\Debug\net8.0\refint\PODBooking.Services.dll
+D:\Visual Studio Code Tuan\Web\cnpm\cnpm\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.pdb
+D:\Visual Studio Code Tuan\Web\cnpm\cnpm\cnpm\PODBooking.Services\bin\Debug\net8.0\appsettings.Development.json
+D:\Visual Studio Code Tuan\Web\cnpm\cnpm\cnpm\PODBooking.Services\bin\Debug\net8.0\appsettings.json
+D:\Visual Studio Code Tuan\Web\cnpm\cnpm\cnpm\PODBooking.Services\bin\Debug\net8.0\PODBooking.Services.deps.json
+D:\Visual Studio Code Tuan\Web\cnpm\cnpm\cnpm\PODBooking.Services\bin\Debug\net8.0\PODBooking.Services.dll
+D:\Visual Studio Code Tuan\Web\cnpm\cnpm\cnpm\PODBooking.Services\bin\Debug\net8.0\PODBooking.Services.pdb
+D:\Visual Studio Code Tuan\Web\cnpm\cnpm\cnpm\PODBooking.Services\bin\Debug\net8.0\PODBooking.Repositories.dll
+D:\Visual Studio Code Tuan\Web\cnpm\cnpm\cnpm\PODBooking.Services\bin\Debug\net8.0\PODBooking.Repositories.pdb
+D:\Visual Studio Code Tuan\Web\cnpm\cnpm\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.csproj.AssemblyReference.cache
+D:\Visual Studio Code Tuan\Web\cnpm\cnpm\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\Visual Studio Code Tuan\Web\cnpm\cnpm\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.AssemblyInfoInputs.cache
+D:\Visual Studio Code Tuan\Web\cnpm\cnpm\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.AssemblyInfo.cs
+D:\Visual Studio Code Tuan\Web\cnpm\cnpm\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.csproj.CoreCompileInputs.cache
+D:\Visual Studio Code Tuan\Web\cnpm\cnpm\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooki.49329C2C.Up2Date
+D:\Visual Studio Code Tuan\Web\cnpm\cnpm\cnpm\PODBooking.Services\obj\Debug\net8.0\ref\PODBooking.Services.dll
+D:\Visual Studio Code Tuan\Web\cnpm_1\cnpm\PODBooking.Services\bin\Debug\net8.0\appsettings.Development.json
+D:\Visual Studio Code Tuan\Web\cnpm_1\cnpm\PODBooking.Services\bin\Debug\net8.0\appsettings.json
+D:\Visual Studio Code Tuan\Web\cnpm_1\cnpm\PODBooking.Services\bin\Debug\net8.0\PODBooking.Services.deps.json
+D:\Visual Studio Code Tuan\Web\cnpm_1\cnpm\PODBooking.Services\bin\Debug\net8.0\PODBooking.Services.dll
+D:\Visual Studio Code Tuan\Web\cnpm_1\cnpm\PODBooking.Services\bin\Debug\net8.0\PODBooking.Services.pdb
+D:\Visual Studio Code Tuan\Web\cnpm_1\cnpm\PODBooking.Services\bin\Debug\net8.0\PODBooking.Repositories.dll
+D:\Visual Studio Code Tuan\Web\cnpm_1\cnpm\PODBooking.Services\bin\Debug\net8.0\PODBooking.Repositories.pdb
+D:\Visual Studio Code Tuan\Web\cnpm_1\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.csproj.AssemblyReference.cache
+D:\Visual Studio Code Tuan\Web\cnpm_1\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\Visual Studio Code Tuan\Web\cnpm_1\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.AssemblyInfoInputs.cache
+D:\Visual Studio Code Tuan\Web\cnpm_1\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.AssemblyInfo.cs
+D:\Visual Studio Code Tuan\Web\cnpm_1\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.csproj.CoreCompileInputs.cache
+D:\Visual Studio Code Tuan\Web\cnpm_1\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooki.49329C2C.Up2Date
+D:\Visual Studio Code Tuan\Web\cnpm_1\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.dll
+D:\Visual Studio Code Tuan\Web\cnpm_1\cnpm\PODBooking.Services\obj\Debug\net8.0\refint\PODBooking.Services.dll
+D:\Visual Studio Code Tuan\Web\cnpm_1\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.pdb
+D:\Visual Studio Code Tuan\Web\cnpm_1\cnpm\PODBooking.Services\obj\Debug\net8.0\ref\PODBooking.Services.dll
+D:\cnpm_1\cnpm\PODBooking.Services\bin\Debug\net8.0\appsettings.Development.json
+D:\cnpm_1\cnpm\PODBooking.Services\bin\Debug\net8.0\appsettings.json
+D:\cnpm_1\cnpm\PODBooking.Services\bin\Debug\net8.0\PODBooking.Services.deps.json
+D:\cnpm_1\cnpm\PODBooking.Services\bin\Debug\net8.0\PODBooking.Services.dll
+D:\cnpm_1\cnpm\PODBooking.Services\bin\Debug\net8.0\PODBooking.Services.pdb
+D:\cnpm_1\cnpm\PODBooking.Services\bin\Debug\net8.0\PODBooking.Repositories.dll
+D:\cnpm_1\cnpm\PODBooking.Services\bin\Debug\net8.0\PODBooking.Repositories.pdb
+D:\cnpm_1\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.csproj.AssemblyReference.cache
+D:\cnpm_1\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\cnpm_1\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.AssemblyInfoInputs.cache
+D:\cnpm_1\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.AssemblyInfo.cs
+D:\cnpm_1\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.csproj.CoreCompileInputs.cache
+D:\cnpm_1\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooki.49329C2C.Up2Date
+D:\cnpm_1\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.dll
+D:\cnpm_1\cnpm\PODBooking.Services\obj\Debug\net8.0\refint\PODBooking.Services.dll
+D:\cnpm_1\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.pdb
+D:\cnpm_1\cnpm\PODBooking.Services\obj\Debug\net8.0\ref\PODBooking.Services.dll
+D:\Visual Studio Code Tuan\Web\cnpm\PODBooking.Services\bin\Debug\net8.0\appsettings.Development.json
+D:\Visual Studio Code Tuan\Web\cnpm\PODBooking.Services\bin\Debug\net8.0\appsettings.json
+D:\Visual Studio Code Tuan\Web\cnpm\PODBooking.Services\bin\Debug\net8.0\PODBooking.Services.deps.json
+D:\Visual Studio Code Tuan\Web\cnpm\PODBooking.Services\bin\Debug\net8.0\PODBooking.Services.dll
+D:\Visual Studio Code Tuan\Web\cnpm\PODBooking.Services\bin\Debug\net8.0\PODBooking.Services.pdb
+D:\Visual Studio Code Tuan\Web\cnpm\PODBooking.Services\bin\Debug\net8.0\PODBooking.Repositories.dll
+D:\Visual Studio Code Tuan\Web\cnpm\PODBooking.Services\bin\Debug\net8.0\PODBooking.Repositories.pdb
+D:\Visual Studio Code Tuan\Web\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.csproj.AssemblyReference.cache
+D:\Visual Studio Code Tuan\Web\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\Visual Studio Code Tuan\Web\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.AssemblyInfoInputs.cache
+D:\Visual Studio Code Tuan\Web\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.AssemblyInfo.cs
+D:\Visual Studio Code Tuan\Web\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.csproj.CoreCompileInputs.cache
+D:\Visual Studio Code Tuan\Web\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooki.49329C2C.Up2Date
+D:\Visual Studio Code Tuan\Web\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.dll
+D:\Visual Studio Code Tuan\Web\cnpm\PODBooking.Services\obj\Debug\net8.0\refint\PODBooking.Services.dll
+D:\Visual Studio Code Tuan\Web\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.pdb
+D:\Visual Studio Code Tuan\Web\cnpm\PODBooking.Services\obj\Debug\net8.0\ref\PODBooking.Services.dll
+D:\Visual Studio Code Tuan\Web\cnpm\cnpm\PODBooking.Services\bin\Debug\net8.0\appsettings.Development.json
+D:\Visual Studio Code Tuan\Web\cnpm\cnpm\PODBooking.Services\bin\Debug\net8.0\appsettings.json
+D:\Visual Studio Code Tuan\Web\cnpm\cnpm\PODBooking.Services\bin\Debug\net8.0\PODBooking.Services.deps.json
+D:\Visual Studio Code Tuan\Web\cnpm\cnpm\PODBooking.Services\bin\Debug\net8.0\PODBooking.Services.dll
+D:\Visual Studio Code Tuan\Web\cnpm\cnpm\PODBooking.Services\bin\Debug\net8.0\PODBooking.Services.pdb
+D:\Visual Studio Code Tuan\Web\cnpm\cnpm\PODBooking.Services\bin\Debug\net8.0\PODBooking.Repositories.dll
+D:\Visual Studio Code Tuan\Web\cnpm\cnpm\PODBooking.Services\bin\Debug\net8.0\PODBooking.Repositories.pdb
+D:\Visual Studio Code Tuan\Web\cnpm\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.csproj.AssemblyReference.cache
+D:\Visual Studio Code Tuan\Web\cnpm\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\Visual Studio Code Tuan\Web\cnpm\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.AssemblyInfoInputs.cache
+D:\Visual Studio Code Tuan\Web\cnpm\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.AssemblyInfo.cs
+D:\Visual Studio Code Tuan\Web\cnpm\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.csproj.CoreCompileInputs.cache
+D:\Visual Studio Code Tuan\Web\cnpm\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooki.49329C2C.Up2Date
+D:\Visual Studio Code Tuan\Web\cnpm\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.dll
+D:\Visual Studio Code Tuan\Web\cnpm\cnpm\PODBooking.Services\obj\Debug\net8.0\refint\PODBooking.Services.dll
+D:\Visual Studio Code Tuan\Web\cnpm\cnpm\PODBooking.Services\obj\Debug\net8.0\PODBooking.Services.pdb
+D:\Visual Studio Code Tuan\Web\cnpm\cnpm\PODBooking.Services\obj\Debug\net8.0\ref\PODBooking.Services.dll
