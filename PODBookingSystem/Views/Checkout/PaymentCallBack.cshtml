@@ -1,0 +1,11 @@
+﻿@using PODBooking.Repositories.Models.Momo
+@model MomoExecuteResponseModel
+
+@{
+    ViewData["Title"] = "Kết quả thanh toán thành công";
+}
+
+<h5>Thanh toán MoMo thành công với:</h5>
+<h6>OrderId: @Model.OrderId</h6>
+<h6>OrderInfo: @Model.OrderInfo</h6>
+<h6>Tổng Tiền: @Model.Amount</h6>

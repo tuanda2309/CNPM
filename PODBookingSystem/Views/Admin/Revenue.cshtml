@@ -1,0 +1,69 @@
+@{
+    Layout = null;
+}
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <title>POD BOOKING</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="~/img/logo.ico">
+    <!-- GOOGLE FONTS CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&display=swap">
+    <!-- FONT AWESOME CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="~/css/revenue.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logoArea">
+                <a href="@Url.Action("Dashboard", "Admin")" class="image"><img src="~/img/logo2.png" alt="POD Booking Logo"></a>
+                <a href="@Url.Action("Dashboard", "Admin")" class="siteName">
+                    <h1><span class="highlight">POD</span> BOOKING</h1>
+                </a>
+            </div>
+
+            <a href="@Url.Action("ProfileAdmin", "Admin")">
+                <div class="profile">
+                    <img src="~/img/profil-logo.jpg" alt="Profile Icon">
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Biểu đồ đường - Doanh thu theo tháng -->
+        <div class="chart-container">
+            <h2>Biến động Doanh Thu Theo Tháng</h2>
+            <canvas id="monthlyLineChart"></canvas>
+        </div>
+
+        <!-- Biểu đồ Tỷ lệ Doanh thu theo Loại Phòng (Biểu đồ hình tròn) -->
+        <div class="chart-container">
+            <h2>Tỷ lệ Doanh Thu Theo Loại Phòng</h2>
+            <canvas id="roomRevenueChart"></canvas>
+        </div>
+
+        <!-- Biểu đồ Doanh thu theo tháng (Biểu Đồ Cột) -->
+        <div class="chart-container">
+            <h2>Doanh Thu Theo Tháng (Biểu Đồ Cột)</h2>
+            <canvas id="monthlyBarChart"></canvas>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        var revenueData = @Html.Raw(Json.Serialize(ViewBag.RevenueData));
+        var roomRevenueData = @Html.Raw(Json.Serialize(ViewBag.RoomRevenueData));
+    </script>
+
+    <script src="~/js/revenue.js"></script>
+    <script src="~/js/profileHeader.js"></script>
+    <script src="~/js/script.js"></script>
+</body>
+</html>

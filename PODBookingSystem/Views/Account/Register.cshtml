@@ -1,0 +1,50 @@
+﻿@model PODBookingSystem.ViewModels.RegisterViewModel
+@{
+    Layout = null;
+}
+
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <title>Đăng ký - POD Booking System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="~/css/login_register_edit_create.css">
+</head>
+<body>
+    <header>
+        <!-- Nội dung header -->
+    </header>
+
+    <main class="bg1">
+        <div class="main-container">
+            <div class="box">
+                <h1 class="formName">Đăng ký</h1>
+                <form asp-action="Register" asp-controller="Account" method="post">
+                    <label for="username">Tên đăng nhập</label>
+                    <input id="username" name="Username" type="text" minlength="3" required value="@Model.Username" />
+
+                    <label for="email">Email</label>
+                    <input id="email" name="Email" type="email" required value="@Model.Email" />
+
+                    <label for="password">Mật khẩu</label>
+                    <input id="password" name="Password" type="password" minlength="6" required />
+
+                    <label for="repassword">Xác nhận mật khẩu</label>
+                    <input id="repassword" name="ConfirmPassword" type="password" minlength="6" required />
+
+                    <button class="submitBtn" type="submit">Đăng ký</button>
+                </form>
+                <p class="login-register">
+                    Bạn đã có tài khoản? <a href="/Account/Login">Đăng nhập tại đây</a>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Nội dung footer -->
+    </footer>
+</body>
+</html>

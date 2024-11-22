@@ -1,0 +1,52 @@
+﻿@{
+    Layout = null;
+}
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <title>POD BOOKING</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="~/img/logo.ico">
+    <!-- GOOGLE FONTS CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&display=swap">
+    <!-- FONT AWESOME CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="~/css/dashboard.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logoArea">
+                <a href="@Url.Action("Dashboard", "Admin")" class="image"><img src="~/img/logo2.png" alt="POD Booking Logo"></a>
+                <a href="@Url.Action("Dashboard", "Admin")" class="siteName">
+                    <h1><span class="highlight">POD</span> BOOKING</h1>
+                </a>
+            </div>
+
+            <a href="@Url.Action("ProfileAdmin", "Admin")">
+                <div class="profile">
+                    <img src="~/img/profil-logo.jpg" alt="Profile Icon">
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="dashboard">
+            <h2>Bảng Điều Khiển</h2>
+            <nav>
+                <ul>
+                    <li><a href="@Url.Action("profileUsers", "Admin")"><i class="fas fa-user-plus"></i> Tạo và cấp quyền</a></li>
+                    <li><a href="@Url.Action("Revenue", "Admin")"><i class="fas fa-chart-line"></i> Doanh Thu</a></li>
+                    <li><a href="@Url.Action("Rooms", "Admin")"><i class="fas fa-door-open"></i> Quản lý phòng</a></li>
+                </ul>
+            </nav>
+        </section>
+    </main>
+    <script src="~/js/profileHeader.js"></script>
+</body>
+</html>

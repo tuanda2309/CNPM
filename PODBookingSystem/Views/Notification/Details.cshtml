@@ -1,0 +1,25 @@
+﻿@model PODBookingSystem.Models.Notification
+
+@{
+    Layout = null;
+}
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Thông Báo</title>
+    <link rel="stylesheet" href="~/css/notificationDetails.css">
+</head>
+<body>
+    <main>
+        <h1>Chi Tiết Thông Báo</h1>
+        <div class="notification">
+            <h2>@Model.Title</h2>
+            <p>@Model.Message</p>
+            <small>Ngày tạo: @Model.CreatedAt.ToString("g")</small>
+        </div>
+        <a class="btn-back" href="@Url.Action("Index", "Home")">Quay lại trang chủ</a>
+    </main>
+</body>
+</html>

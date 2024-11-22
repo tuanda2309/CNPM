@@ -1,0 +1,215 @@
+﻿@{
+    Layout = null;
+}
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <title>POD BOOKING</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="~/img/logo.ico">
+    <!-- GOOGLE FONTS CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&display=swap">
+    <!-- FONT AWESOME CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="~/css/home.css">
+    <link rel="stylesheet" href="~/css/notification-container.css">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logoArea">
+                <a asp-controller="Home" asp-action="Index" class="image"><img src="~/img/logo2.png" alt="POD Booking Logo"></a>
+                <a asp-controller="Home" asp-action="Index" class="siteName">
+                    <h1><span class="highlight">POD</span> BOOKING</h1>
+                </a>
+            </div>
+
+            <div class="menuArea">
+                <div class="menuBtn">
+                    <span class="line-1"></span>
+                    <span class="line-2"></span>
+                    <span class="line-3"></span>
+                </div>
+            </div>
+
+            <div class="navBar">
+                <ul>
+                    <li><a href="@Url.Action("Index", "Home")">🏠Trang chủ</a></li>
+                    <li><a asp-controller="Room" asp-action="SeeRoom">💻Xem phòng</a></li>
+                    <li><a asp-controller="ServiceAddOn" asp-action="Service">🏪Dịch vụ</a></li>
+                    <li><a asp-controller="Calendar" asp-action="Calendar">📆Lịch</a></li>
+                    <li><a asp-controller="Room" asp-action="Vip">🕌Phòng VIP</a></li>
+
+                    @if (User.Identity.IsAuthenticated)  
+                    {
+                        if (User.IsInRole("Staff"))
+                        {
+                            <li><a asp-controller="Room" asp-action="CreateRoom">✍️ Đăng phòng</a></li>
+                        }
+
+                        
+                        if (User.IsInRole("Customer"))
+                        {
+    
+                            <div class="notification-icon">
+                                <i class="fas fa-bell"></i>
+                            </div>
+
+                            <div class="notification-list" id="notificationList" style="display: none;">
+                                <h4>Thông báo</h4>
+                                <div id="notificationItems" class="notification-items">
+                                    <p>Không có thông báo mới.</p>
+                                </div>
+                            </div>
+
+                        }
+                        <li class="profile-dropdown">
+                            <a href="javascript:void(0);" class="profile-btn">
+                                @{
+                                    var profileImage = Model?.ProfileImage ?? "~/img/default_image_path.png";
+                                }
+                                <img id="menu-profile-image" src="@Url.Content(profileImage)" alt="Profile Image" style="width: 30px; height: 30px; border-radius: 50%;">
+                            </a>
+                            <ul class="dropdown-content">
+                            <li>
+                                <a asp-controller="Account" asp-action="Profile">👤 Xem hồ sơ</a>
+                            </li>
+                                @if (User.IsInRole("Manager"))
+                                {
+                                    <li><a asp-controller="Booking" asp-action="ManageBookings">📋 Quản lý đặt phòng</a></li>
+                                }
+                            <li>
+
+                                <form asp-controller="Account" asp-action="Logout" method="post">
+                                    <button type="submit" style="color:#337ab7;">
+                                        <i>🔓</i> Đăng xuất
+                                    </button>
+                                </form>
+                                
+                            </li>
+                        </ul>
+                    </li>
+                    }
+                    else
+                    {
+                        <li><a asp-controller="Account" asp-action="Login">🔑Đăng nhập</a></li>
+                        <li><a asp-controller="Account" asp-action="Register">✍🏻Đăng ký</a></li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div id="hero-banner">
+        <div class="textArea">
+        </div>
+        <svg class="banner-wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 250">
+            <path fill="#f8f8f8" fill-opacity="1" d="M0,96L120,122.7C240,149,480,203,720,218.7C960,235,1200,213,1320,202.7L1440,192L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
+        </svg>
+    </div>
+
+    <main id="main">
+        <div class="main-container">
+            <section>
+                <div class="article-area">
+                    <article>
+                        <a href="@Url.Action("PhongTrongNgay", "Room")">
+                            <img src="~/img/p2.jpg" alt="Văn phòng trong ngày">
+                        </a>
+
+                        <div class="article-container">
+                            <h1><a href="@Url.Action("PhongTrongNgay", "Room")">Văn phòng trong ngày</a></h1>
+                            <hr>
+                            <h2><i class="fas fa-user"></i><a href=""> Đoàn Anh Tuấn </a><i class="far fa-clock"></i> 10 Tháng 6, 2024</h2>
+                            <p>
+                                Tại sao bạn không thuê văn phòng trong ngày khi bạn hoặc nhóm của mình cần một nơi nào đó để tập trung làm việc?
+                                Văn phòng trong ngày của chúng tôi riêng tư, linh hoạt và thuận lợi, đồng thời có mọi thứ mà bạn cần để bắt tay ngay vào công việc.
+                                Bao gồm Wi-Fi dành cho doanh nghiệp và đồ nội thất kiểu công thái học.
+                                Vì vậy, dù bạn chỉ muốn dùng một văn phòng đầy đủ dịch vụ phù hợp về quy mô hoặc cần một cơ sở trong thời gian ngắn cho một dự án, chúng tôi đều có giải pháp cho bạn.
+                                Tất nhiên là nếu bạn không cần sử dụng văn phòng cả ngày, chúng tôi cũng có lựa chọn cho thuê không gian văn phòng theo giờ.
+                            </p>
+                        </div>
+                    </article>
+                    
+                    <article>
+                        <a href="@Url.Action("PhongHop", "Room")">
+                            <img src="~/img/p3.jpg" alt="Phòng Họp">
+                        </a>
+                        <div class="article-container">
+                            <h1><a href="@Url.Action("PhongHop", "Room")">Phòng Họp</a></h1>
+                            <hr>
+                            <h2><i class="fas fa-user"></i><a href=""> Nguyễn Võ Đăng Khoa </a><i class="far fa-clock"></i> 11 Tháng 6, 2024</h2>
+                            <p>
+                                Có vô vàn lý do khiến bạn cần một nơi để gặp gỡ.
+                                Rất may, chúng tôi cung cấp hơn 10.000 phòng họp để bạn lựa chọn.
+                                Từ phòng nhỏ đến phòng hội đồng và phòng hội nghị lớn.
+                                Chỉ cần vài phút là bạn có thể đặt trước phòng họp mà mình muốn trong bao lâu tùy thích.
+                            </p>
+                        </div>
+                    </article>
+                    <!-- Thêm các bài viết khác tương tự -->
+                </div>
+                <div class="buttonArea">
+                    <a href="~/index" class="btn">Quay lại trang chủ</a>
+                </div>
+            </section>
+
+        <aside>
+            <div class="box socialMedia">
+                <div class="container">
+                    <h1>Mạng xã hội</h1>
+                    <hr>
+                    <div class="post">
+                        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="box searchBox">
+                <div class="container">
+                    <h1>Tìm kiếm</h1>
+                    <hr>
+                    <div class="post">
+                        <input id="searchInput" placeholder="Tìm kiếm trang web này" type="text">
+                        <a id="searchButton" href="javascript:void(0)">🔎</a>
+                    </div>
+                </div>
+            </div> 
+        </aside>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <nav class="navBar">
+                <ul>
+                    <li><a href="@Url.Action("Index", "Home")">TRANG CHỦ</a></li>
+                    <li><a href="#">QUAY LẠI ĐẦU TRANG</a></li>
+                    <li><a href="https://zalo.me/0399848871">LIÊN HỆ VỚI CHÚNG TÔI</a></li>
+                </ul>
+            </nav>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="~/js/navbar.js"></script>
+</body>
+
+</html>

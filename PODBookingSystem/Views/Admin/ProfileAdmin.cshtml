@@ -1,0 +1,66 @@
+﻿@model PODBookingSystem.ViewModels.AdminProfileViewModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Admin</title>
+    <link rel="stylesheet" href="@Url.Content("~/css/profileAdmin.css")">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logoArea">
+                <a href="@Url.Action("Dashboard", "Admin")" class="image">
+                    <img src="@Url.Content("~/img/logo2.png")" alt="POD Booking Logo">
+                </a>
+                <a href="@Url.Action("Dashboard", "Admin")" class="siteName">
+                    <h1><span class="highlight">POD</span> BOOKING</h1>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="sideBar">
+        <div class="sideBar-container profile-container">
+            <img id="profile-image" src="@Url.Content("~/img/profil-logo.jpg")" alt="Ảnh hồ sơ">
+            <h1 id="profile-username">@Model.Username</h1>
+            <h2 id="profile-email">@Model.Email</h2>
+            <h2 id="profile-role">@Model.Role</h2>
+            <p id="profile-title">ADMIN PODBOOKING👋</p>
+
+        <form action="@Url.Action("UploadProfileImage", "Admin")" method="post" enctype="multipart/form-data">
+            <input type="file" id="upload-profile-image" name="file" accept="image/*" style="display: none;">
+            <button type="button" id="change-profile-image-btn">Chọn ảnh mới</button>
+            <img id="preview" style="display: none; width: 100px; height: 100px;">
+            <button type="button" id="save-profile-image-btn" style="display: none;">Lưu ảnh</button>
+        </form>
+
+
+        </div>
+    </div>
+
+    <div class="mainContent">
+        <section class="quickActions">
+        <h2>Hành Động Nhanh</h2>
+        <button onclick="window.location.href='@Url.Action("ProfileUsers", "Admin")'">Tạo $ Cấp Quyền</button>
+        <button onclick="window.location.href='@Url.Action("Rooms", "Admin")'">Quản Lý Phòng VIP</button>
+        <button onclick="window.location.href='@Url.Action("Revenue", "Admin")'">Quản Lý Doanh Thu</button>
+    </section>
+
+    <section class="statistics">
+        <h2>Thống Kê</h2>
+        <div class="chart">
+            <canvas id="roomChart"></canvas>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="~/js/profileAdmin.js"></script>
+</body>
+</html>

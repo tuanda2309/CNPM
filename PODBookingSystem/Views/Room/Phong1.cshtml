@@ -1,0 +1,92 @@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Căn Phòng VIP</title>
+    <link rel="stylesheet" href="~/css/V.css">
+</head>
+
+<body>
+    <header>
+        <div class="logoArea">
+            <a href="@Url.Action("Index", "Home")" class="image"><img src="~/img/logo2.png" alt="Logo"></a>
+            <a href="@Url.Action("Index", "Home")" class="siteName">
+                <h1><span class="highlight">POD</span> BOOKING</h1>
+            </a>
+        </div>
+        <h1>Chào Mừng Đến Với Căn Phòng VIP</h1>
+        <p>Trải nghiệm dịch vụ tuyệt vời trong căn phòng sang trọng của chúng tôi.</p>
+    </header>
+
+    <section class="room-info">
+        <h2>Thông Tin Căn Phòng</h2>
+        <div class="room-details">
+            <img src="~/img/vip-room1.jpg" alt="Căn phòng VIP" class="room-image">
+            <div class="details">
+                <h3>Mô Tả:</h3>
+                <ul>
+                    <li>Giường cỡ king</li>
+                    <li>Khu nghỉ dưỡng cao cấp</li>
+                    <li>Wi-Fi miễn phí</li>
+                    <li>TV màn hình phẳng với các kênh quốc tế</li>
+                    <li>Mini bar đầy đủ</li>
+                    <li>Dịch vụ phòng 24/7</li>
+                </ul>
+            </div>
+        </div>
+        <a href="#####">
+            <button class="booking-btn">Đặt Phòng</button>
+        </a>
+    </section>
+
+    <section class="amenities">
+        <h2>Tiện Nghi Cao Cấp</h2>
+        <ul>
+            <li>🌐 Wi-Fi tốc độ cao</li>
+            <li>📺 Hệ thống giải trí hiện đại</li>
+            <li>🛁 Phòng tắm cao cấp với jacuzzi</li>
+            <li>🍽 Dịch vụ phòng 24/7</li>
+        </ul>
+    </section>
+
+    <section class="intro-video">
+        <h2>Giới Thiệu Căn Phòng VIP</h2>
+        <div class="video-container">
+            <div class="video">
+                <video controls width="100%">
+                    <source src="~/video/video1.mp4" type="video/mp4">
+                    Trình duyệt của bạn không hỗ trợ video.
+                </video>
+            </div>
+            <div class="comments">
+                <h3>Bình luận</h3>
+                <div class="commentsArea">
+                    <div class="container">
+                        <div class="commentBox">
+                            <textarea id="commentText" placeholder="Viết bình luận của bạn..." rows="4" required></textarea>
+                            <button id="commentSubmit" type="button">Gửi</button>
+                        </div>
+                        <div class="commentsDisplay" id="comments-container">
+                            <!-- Bình luận sẽ được hiển thị ở đây -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+       
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="~/js/V.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+@{
+    Layout = null;
+}
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <title>POD BOOKING</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="~/img/logo.ico">
+    <!-- GOOGLE FONTS CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&display=swap">
+    <!-- FONT AWESOME CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="~/css/rooms.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logoArea">
+                <a href="@Url.Action("Dashboard", "Admin")" class="image"><img src="~/img/logo2.png" alt="POD Booking Logo"></a>
+                <a href="@Url.Action("Dashboard", "Admin")" class="siteName">
+                    <h1><span class="highlight">POD</span> BOOKING</h1>
+                </a>
+            </div>
+
+            <a href="@Url.Action("ProfileAdmin", "Admin")">
+                <div class="profile">
+                    <img src="~/img/profil-logo.jpg" alt="Profile Icon">
+                </div>
+            </a>
+        </div>
+    </header>
+
+        <div class="main-content">
+        <div class="content-header">
+            <h2>Quản lý Phòng VIP</h2>
+            <a href="@Url.Action("CreateRoom", "Room")" id="add-room-btn" class="btn btn-primary">Thêm Phòng</a>
+        </div>
+    </div>
+        <div class="room-list">
+            <!-- Danh sách phòng sẽ được thêm vào đây -->
+        </div>
+    </div>
+
+    <footer>
+        
+    </footer>
+    <script src="~/js/profileHeader.js"></script>
+    <script src="~/js/rooms.js"></script>
+</body>
+
+</html>

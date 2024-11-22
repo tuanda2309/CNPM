@@ -1,0 +1,11 @@
+﻿@model List<PODBookingSystem.Models.Notification>
+
+<div class="notification-items">
+    @foreach (var notification in Model)
+    {
+        <div class="notification-item">
+            <p>@notification.Message</p>
+            <a href="@Url.Action("Details", "Notification", new { id = notification.NotificationId })">Xem chi tiết</a>
+        </div> 
+    }
+</div>

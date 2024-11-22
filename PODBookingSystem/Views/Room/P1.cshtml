@@ -1,0 +1,168 @@
+@{
+    Layout = null;
+}
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <title>@Model.Name - POD BOOKING</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="~/img/logo.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="~/css/podbking.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logoArea">
+                <a href="@Url.Action("Index", "Home")" class="image"><img src="~/img/logo2.png"></a>
+                <a href="@Url.Action("Index", "Home")" class="siteName">
+                    <h1><span class="highlight">POD</span> BOOKING</h1>
+                </a>
+            </div>
+            <div class="menuArea">
+                <div class="menuBtn">
+                    <span class="line-1"></span>
+                    <span class="line-2"></span>
+                    <span class="line-3"></span>
+                </div>
+            </div>
+            <div class="navBar">
+                <ul>
+                    <li><a href="@Url.Action("Index", "Home")">🏠Trang chủ</a></li>
+                    <li><a asp-controller="Room" asp-action="SeeRoom">💻Xem phòng</a></li>
+                    <li><a asp-controller="ServiceAddOn" asp-action="Service">🏪Dịch vụ</a></li>
+                    <li><a asp-controller="Calendar" asp-action="Calendar">📆Lịch</a></li>
+                    <li><a asp-controller="Room" asp-action="Vip">🕌Phòng VIP</a></li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        if (User.IsInRole("Staff"))
+                        {
+                            <li><a asp-controller="Room" asp-action="CreateRoom">✍️ Đăng phòng</a></li>
+                        }
+                        <li class="profile-dropdown">
+                            <a href="javascript:void(0);" class="profile-btn">
+                                @{
+                                   
+                                    var profileImage = User.FindFirst("ProfileImage")?.Value ?? "~/img/default_image_path.png";
+                                }
+                                <img id="menu-profile-image" src="@Url.Content(profileImage)" alt="Profile Image" style="width: 30px; height: 30px; border-radius: 50%;">
+                            </a>
+                            <ul class="dropdown-content">
+                            <li>
+                                <a asp-controller="Account" asp-action="Profile">👤 Xem hồ sơ</a>
+                            </li>
+                            <li>
+
+                                <form asp-controller="Account" asp-action="Logout" method="post">
+                                    <button type="submit" style="color:#337ab7;">
+                                        <i>🔓</i> Đăng xuất
+                                    </button>
+                                </form>
+                                
+                            </li>
+                        </ul>
+                    </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </header>
+
+        <main id="main">
+            <div class="main-container">
+                <section>
+                    <div class="postArea">
+                        <div class="container">
+                            <div class="textArea">
+                                <h1>Phòng Họp</h1>
+                            </div>
+                            <hr>
+                            <h2><i class="fas fa-user"></i><a href="#"> Nguyễn Võ Đăng Khoa </a><i class="far fa-clock"></i> 11 Tháng 6, 2024</h2>
+                            <img src="~/img/p3.jpg" alt="Hình ảnh">
+                            <p>Có vô vàn lý do khiến bạn cần một nơi để gặp gỡ. 
+                            Rất may, chúng tôi cung cấp hơn 10.000 phòng họp để bạn lựa chọn. 
+                            Từ phòng nhỏ đến phòng hội đồng và phòng hội nghị lớn. 
+                            Chỉ cần vài phút là bạn có thể đặt trước phòng họp mà mình muốn trong bao lâu tùy thích.</p>
+                        </div>
+                    </div>
+
+                    
+
+                    <div class="commentsArea">
+                    <div class="container">
+                        <h1>Đăng bình luận</h1>
+                        <hr>
+                        <div class="commentBox">
+                            <textarea id="commentText" placeholder="Comment" rows="4" required></textarea>
+                            <button id="commentSubmit" type="button">Gửi bình luận</button>
+                        </div>
+                        <div class="commentsDisplay" id="commentList">
+                            <!-- Bình luận sẽ được hiển thị ở đây -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <aside>
+                
+                <div class="box socialMedia">
+        <div class="container">
+            <h1>Mạng xã hội</h1>
+            <hr>
+            <div class="post">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="box searchBox">
+        <div class="container">
+            <h1>Tìm kiếm</h1>
+            <hr>
+            <div class="post">
+                <input id="searchInput" placeholder="Tìm kiếm trang web này" type="text">
+                <a id="searchButton" href="javascript:void(0)">🔎</a>
+            </div>
+        </div>
+    </div> 
+
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <nav class="navBar">
+                <ul>
+                    <li><a href="@Url.Action("Index", "Home")">TRANG CHỦ</a></li>
+                    <li><a href="#">QUAY LẠI ĐẦU TRANG</a></li>
+                    <li><a href="https://zalo.me/0399848871">LIÊN HỆ VỚI CHÚNG TÔI</a></li>
+                </ul>
+            </nav>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="~/js/navbar.js"></script>
+    <script>
+        
+
+    </script>
+</body>
+
+</html>

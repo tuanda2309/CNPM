@@ -1,0 +1,55 @@
+﻿@model List<PODBookingSystem.Models.DTOs.BookingDTO>
+
+<h1>Quản Lý Đặt Phòng</h1>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+}
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Thời gian bắt đầu</th>
+            <th>Thời gian kết thúc</th>
+            <th>Trạng thái</th>
+            <th>Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model == null || !Model.Any())
+        {
+            <tr>
+                <td colspan="5" class="text-center">Không có đặt phòng nào để quản lý.</td>
+            </tr>
+        }
+        else
+        {
+            foreach (var booking in Model)
+            {
+                <tr>
+                    <td>@booking.BookingId</td>
+                    <td>@booking.StartTime.ToString("g")</td>
+                    <td>@booking.EndTime.ToString("g")</td>
+                    <td>@booking.Status</td>
+                    <td>
+                        <form method="post" asp-action="UpdateBookingStatus">
+                            <input type="hidden" name="bookingId" value="@booking.BookingId" />
+                            <select name="newStatus">
+                                <option value="Confirmed">Xác nhận</option>
+                                <option value="Pending">Chờ xử lý</option>
+                                <option value="Cancelled">Hủy</option>
+                            </select>
+                            <button type="submit">Cập nhật</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

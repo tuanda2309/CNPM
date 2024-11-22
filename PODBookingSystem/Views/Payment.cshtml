@@ -1,0 +1,36 @@
+﻿@model PODBookingSystem.Models.PaymentDTO
+@{
+    ViewData["Title"] = "Thanh Toán";
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>@ViewData["Title"]</h2>
+        <div class="card p-4">
+            <p><strong>Booking ID:</strong> @Model.BookingId</p>
+            <p><strong>Số tiền:</strong> @Model.Amount VND</p>
+
+            <hr />
+
+            <form asp-action="ProcessPayment" method="post">
+                <div class="form-group">
+                    <label for="paymentMethod">Chọn phương thức thanh toán:</label>
+                    <select asp-for="PaymentMethod" class="form-control" id="paymentMethod">
+                        <option value="VNPay">VNPay</option>
+                        <option value="MoMo">MoMo</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Thanh Toán</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

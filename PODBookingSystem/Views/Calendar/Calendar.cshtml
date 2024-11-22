@@ -1,0 +1,148 @@
+@model PODBookingSystem.ViewModels.CalendarViewModel
+
+@{
+    Layout = null;
+}
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <title>@Model.Name - POD BOOKING</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="~/img/logo.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="~/css/calendar.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logoArea">
+                <a href="@Url.Action("Index", "Home")" class="image"><img src="~/img/logo2.png"></a>
+                <a href="@Url.Action("Index", "Home")" class="siteName">
+                    <h1><span class="highlight">POD</span> BOOKING</h1>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Phần điều hướng cho lịch -->
+    <div class="schedule-navigation">
+        <button onclick="changeWeek(-1)">&#9664; Trang trước</button>
+        <button onclick="changeWeek(1)">Trang tiếp &#9654;</button>
+    </div>
+
+    <!-- Trường nhập ngày mong muốn -->
+    <div class="date-navigation">
+        <label for="desiredDate">Nhập ngày mong muốn:</label>
+        <input type="date" id="desiredDate" />
+        <button onclick="goToDesiredDate()">Đi đến ngày</button>
+    </div>
+
+    <!-- Lịch -->
+    <div class="schedule" id="schedule"></div>
+
+    <footer>
+        
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        let currentDate = new Date();
+
+        // Render lịch
+        function renderSchedule() {
+            const schedule = document.getElementById("schedule");
+
+            // Lấy ngày đầu tuần
+            const startOfWeek = new Date(currentDate);
+            const dayOffset = (startOfWeek.getDay() === 0) ? -6 : -(startOfWeek.getDay() - 1);
+            startOfWeek.setDate(startOfWeek.getDate() + dayOffset);
+
+            // Dữ liệu booking từ Model
+            const bookings = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.Bookings));
+
+            // Tạo các tiêu đề (Thứ + Ngày)
+            const headers = Array.from({ length: 7 }, (_, i) => {
+                const date = new Date(startOfWeek);
+                date.setDate(startOfWeek.getDate() + i);
+                return `
+                                    <div class="cell header">
+                                        ${i === 6 ? 'Chủ nhật' : `Thứ ${i + 2}`}<br>
+                                        <span style="font-size: 14px; font-weight: normal; color: #555;">
+                                            ${date.toLocaleDateString('vi-VN')}
+                                        </span>
+                                    </div>
+                                `;
+            }).join('');
+
+            // Render lịch (hiển thị các booking theo ngày)
+            schedule.innerHTML = `
+                                <div class="row">
+                                    ${headers}
+                                </div>
+                                <div class="row">
+                                    ${Array.from({ length: 7 }, (_, i) => {
+                const date = new Date(startOfWeek);
+                date.setDate(startOfWeek.getDate() + i);
+
+                // Lọc các booking có trong ngày hiện tại
+                const dailyBookings = bookings.filter(b => {
+                    const startTime = new Date(b.StartTime);
+                    const endTime = new Date(b.EndTime);
+
+                    // Chuẩn hóa ngày
+                    const currentDateStart = new Date(date);
+                    currentDateStart.setHours(0, 0, 0, 0);
+
+                    const currentDateEnd = new Date(date);
+                    currentDateEnd.setHours(23, 59, 59, 999);
+
+                    // Kiểm tra xem booking nằm trong ngày hiện tại
+                    return (
+                        currentDateStart <= endTime && currentDateEnd >= startTime && b.Status === "Confirmed"
+                    );
+                });
+
+                return `
+                                    <div class="cell content">
+                                        ${dailyBookings.map(b => `
+                                            <div class="booking-item">
+                                                🕒 ${new Date(b.StartTime).toLocaleTimeString('vi-VN')} - ${new Date(b.EndTime).toLocaleTimeString('vi-VN')}<br>
+                                                📍 Phòng: ${b.RoomName}<br>
+                                                👤 Khách: ${b.CustomerName}
+                                            </div>
+                                        `).join('')}
+                                    </div>
+                                `;
+            }).join('')}
+                                </div>
+                            `;
+        }
+
+        // Thay đổi tuần
+        function changeWeek(direction) {
+            currentDate.setDate(currentDate.getDate() + direction * 7);
+            renderSchedule();
+        }
+
+        // Chuyển đến ngày mong muốn
+        function goToDesiredDate() {
+            const desiredDateInput = document.getElementById("desiredDate").value;
+            if (desiredDateInput) {
+                currentDate = new Date(desiredDateInput);
+                renderSchedule();
+            } else {
+                alert("Vui lòng nhập ngày hợp lệ.");
+            }
+        }
+
+        // Khởi tạo lịch khi tải trang
+        document.addEventListener("DOMContentLoaded", () => {
+            renderSchedule();
+        });
+    </script>
+
+</body>
+</html>

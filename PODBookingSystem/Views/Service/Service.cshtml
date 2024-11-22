@@ -1,0 +1,221 @@
+@{
+    Layout = null;
+}
+
+@model IEnumerable<PODBookingSystem.ViewModels.RoomViewModel>
+
+@{
+    var profileImage = User.FindFirst("ProfileImage")?.Value ?? "~/img/default_image_path.jpg";
+}
+
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <title>POD BOOKING</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="~/img/logo.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="~/css/service.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logoArea">
+                <a href="@Url.Action("Index", "Home")" class="image"><img src="~/img/logo2.png"></a>
+                <a href="@Url.Action("Index", "Home")" class="siteName">
+                    <h1><span class="highlight">POD</span> BOOKING</h1>
+                </a>
+            </div>
+            <div class="menuArea">
+                <div class="menuBtn">
+                    <span class="line-1"></span>
+                    <span class="line-2"></span>
+                    <span class="line-3"></span>
+                </div>
+            </div>
+            <div class="navBar">
+                <ul>
+                    <li><a href="@Url.Action("Index", "Home")">🏠Trang chủ</a></li>
+                    <li><a asp-controller="Room" asp-action="SeeRoom">💻Xem phòng</a></li>
+                    <li><a asp-controller="ServiceAddOn" asp-action="Service">🏪Dịch vụ</a></li>
+                    <li><a asp-controller="Calendar" asp-action="Calendar">📆Lịch</a></li>
+                    <li><a asp-controller="Room" asp-action="Vip">🕌Phòng VIP</a></li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        if (User.IsInRole("Staff"))
+                        {
+                            <li><a asp-controller="Room" asp-action="CreateRoom">✍️ Đăng phòng</a></li>
+                        }
+                        <li class="profile-dropdown">
+                            <a href="javascript:void(0);" class="profile-btn">
+                                
+                                <img id="menu-profile-image" src="@Url.Content(profileImage)" alt="Profile Image" style="width: 30px; height: 30px; border-radius: 50%;">
+                            </a>
+                            <ul class="dropdown-content">
+                                <li>
+                                <a asp-controller="Account" asp-action="Profile">👤 Xem hồ sơ</a>
+                            </li>
+                                @if (User.IsInRole("Manager"))
+                                {
+                                    <li><a asp-controller="Booking" asp-action="ManageBookings">📋 Quản lý đặt phòng</a></li>
+                                }
+                            <li>
+
+                                <form asp-controller="Account" asp-action="Logout" method="post">
+                                    <button type="submit" style="color:#337ab7;">
+                                        <i>🔓</i> Đăng xuất
+                                    </button>
+                                </form>
+                                </li>
+                            </ul>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <div class="main-container">
+            <section>
+                <div class="article-area">
+
+                    <article>
+                        <a href="https://shopeefood.vn/ho-chi-minh/hello-burger-hamburger-chicken-dien-bien-phu"><img src="~/img/p19.jpg" alt="Hamburger"></a>
+                        <div class="article-container">
+                            <h1><a href="https://shopeefood.vn/ho-chi-minh/hello-burger-hamburger-chicken-dien-bien-phu">Hamburger</a></h1>
+                            <hr>
+                            <h2><i class="fas fa-user"></i><a href=""> Đoàn Anh Tuấn</a> <i class="far fa-clock"></i> 22
+                                tháng 7, 2024</h2>
+                            <p>Hello Burger - Hamburger & Chicken - Điện Biên Phủ
+                                504 Điện Biên Phủ, P. 11, Quận 10, TP. HCM</p>
+                                     </div>
+                                  </article>
+
+                                 <article>
+                        <a href="https://shopeefood.vn/ho-chi-minh/banh-mi-ba-huynh-cong-quynh"><img src="~/img/p20.jpg" alt="Bánh  mmì"></a>
+                        <div class="article-container">
+                            <h1><a href="https://shopeefood.vn/ho-chi-minh/banh-mi-ba-huynh-cong-quynh"> Bánh mì</a></h1>
+                            <hr>
+                            <h2><i class="fas fa-user"></i><a href=""> Nguyễn Võ Đăng Khoa</a> <i class="far fa-clock"></i> 22
+                                tháng 7, 2024</h2>
+                            <p>Bánh Mì Bà Huynh - Cống Quỳnh
+                                185k Cống Quỳnh, P. Nguyễn Cư Trinh, Quận 1, TP. HCM</p>
+                                </div>
+                            </article>
+
+                            <article>
+                        <a href="https://shopeefood.vn/ho-chi-minh/ca-phe-muoi-chu-long-17a-ngo-tat-to"><img src="~/img/p21.jpg" alt="Cà phê"></a>
+                        <div class="article-container">
+                            <h1><a href="https://shopeefood.vn/ho-chi-minh/ca-phe-muoi-chu-long-17a-ngo-tat-to"> Cà phê</a></h1>
+                            <hr>
+                            <h2><i class="fas fa-user"></i><a href=""> Lê Hoàng</a> <i class="far fa-clock"></i> 24
+                                tháng 5, 2024</h2>
+                            <p>Cà Phê Muối Chú Long - 17A Ngô Tất Tố
+                                17A Ngô Tất Tố, P. 21, Bình Thạnh, TP. HCM</p>
+                        </div>
+                    </article>
+
+                    <article>
+                        <a href="https://shopeefood.vn/ho-chi-minh/pho-24-saigon-south-residences"><img src="~/img/p22.jpg" alt="Phở"></a>
+                        <div class="article-container">
+                            <h1><a href="https://shopeefood.vn/ho-chi-minh/pho-24-saigon-south-residences"> Phở</a></h1>
+                            <hr>
+                            <h2><i class="fas fa-user"></i><a href=""> Nguyễn Quốc Duy </a> <i class="far fa-clock"></i> 22
+                                tháng 7, 2024</h2>
+                            <p>Phở 24 - Saigon South Residences
+                                A0.02, Sài Gòn South Residences, Nguyễn Hữu Thọ, Xã Phước Kiển, Nhà Bè, TP. HCM</p>
+                        </div>
+                    </article>
+
+                    <article>
+                <a href="https://shopeefood.vn/ho-chi-minh/me-bin-bun-bo-goi-cuon-duong-so-16"><img src="~/img/p23.jpg" alt="Bún bò"></a>
+                <div class="article-container">
+                    <h1><a href="https://shopeefood.vn/ho-chi-minh/me-bin-bun-bo-goi-cuon-duong-so-16"> Bún bò</a></h1>
+                    <hr>
+                    <h2><i class="fas fa-user"></i><a href=""> Đoàn Anh Tuấn </a> <i class="far fa-clock"></i> 22
+                        tháng 7, 2024</h2>
+                    <p>Mẹ Bin - Bún Bò & Gỏi Cuốn - Đường Số 16
+                        2F Đường Số 16, P. 4, Quận 4, TP. HCM</p>
+                        </div>
+                    </article>
+
+                    <article>
+                <a href="https://shopeefood.vn/ho-chi-minh/chit-food-do-an-vat"><img src="~/img/p24.jpg" alt="Bánh pía"></a>
+                <div class="article-container">
+                    <h1><a href="https://shopeefood.vn/ho-chi-minh/chit-food-do-an-vat"> Bánh pía</a></h1>
+                    <hr>
+                    <h2><i class="fas fa-user"></i><a href=""> Nguyễn Võ Đăng Khoa </a> <i class="far fa-clock"></i> 22
+                        tháng 7, 2024</h2>
+                    <p>Chít Food - Đồ Ăn Vặt
+                        307/16/3 Nguyễn Văn Khối, P. 8, Gò Vấp, TP. HCM</p>
+                </div>
+            </article>
+
+                </div>
+                <div class="buttonArea">
+                    <a href="#" class="btn">Quay lại đầu trang</a>
+                </div>
+            </section>
+
+            <aside>
+            <div class="box socialMedia">
+                <div class="container">
+                    <h1>Mạng xã hội</h1>
+                    <hr>
+                    <div class="post">
+                        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="box searchBox">
+                <div class="container">
+                    <h1>Tìm kiếm</h1>
+                    <hr>
+                    <div class="post">
+                        <input id="searchInput" placeholder="Tìm kiếm trang web này" type="text">
+                        <a id="searchButton" href="javascript:void(0)">🔎</a>
+                    </div>
+                </div>
+            </div> 
+        </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <nav class="navBar">
+                <ul>
+                    <li><a asp-controller="Home" asp-action="Index">TRANG CHỦ</a></li>
+                    <li><a href="#">QUAY LẠI ĐẦU TRANG</a></li>
+                    <li><a href="https://zalo.me/0399848871">LIÊN HỆ VỚI CHÚNG TÔI</a></li>
+                </ul>
+            </nav>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="~/js/navbar.js"></script>
+    <script>
+        
+    </script>
+
+</body>
+</html>

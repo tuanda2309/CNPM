@@ -1,0 +1,168 @@
+﻿@{
+    Layout = null;
+}
+@model PODBookingSystem.ViewModels.RoomViewModel
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <title>POD BOOKING - Đăng Tin Cho Thuê Phòng</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="~/img/logo.ico">
+    <!-- GOOGLE FONTS CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&display=swap">
+    <!-- FONT AWESOME CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="~/css/lease.css">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logoArea">
+                <a asp-action="Index" asp-controller="Home" class="image"><img src="~/img/logo2.png" alt="POD BOOKING Logo"></a>
+                <a asp-action="Index" asp-controller="Home" class="siteName">
+                    <h1><span class="highlight">POD</span> BOOKING</h1>
+                </a>
+            </div>
+            <div class="menuArea">
+                <div class="menuBtn">
+                    <span class="line-1"></span>
+                    <span class="line-2"></span>
+                    <span class="line-3"></span>
+                </div>
+            </div>
+            <div class="navBar">
+                <ul>
+                    <li><a href="@Url.Action("Index", "Home")">🏠Trang chủ</a></li>
+                    <li><a asp-controller="Room" asp-action="SeeRoom">💻Xem phòng</a></li>
+                    <li><a asp-controller="ServiceAddOn" asp-action="Service">🏪Dịch vụ</a></li>
+                    <li><a asp-controller="Calendar" asp-action="Calendar">📆Lịch</a></li>
+                    <li><a asp-controller="Room" asp-action="Vip">🕌Phòng VIP</a></li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        if (User.IsInRole("Staff"))
+                        {
+                            <li><a asp-controller="Room" asp-action="CreateRoom">✍️ Đăng phòng</a></li>
+                        }
+                        <li class="profile-dropdown">
+                            <a href="javascript:void(0);" class="profile-btn">
+                                @{
+                                    // Lấy hình ảnh từ User.Claims hoặc một cách khác
+                                    var profileImage = User.FindFirst("ProfileImage")?.Value ?? "~/img/default_image_path.png";
+                                }
+                                <img id="menu-profile-image" src="@Url.Content(profileImage)" alt="Profile Image" style="width: 30px; height: 30px; border-radius: 50%;">
+                            </a>
+                            <ul class="dropdown-content">
+                            <li>
+                                <a asp-controller="Account" asp-action="Profile">👤 Xem hồ sơ</a>
+                            </li>
+                            <li>
+
+                                <form asp-controller="Account" asp-action="Logout" method="post">
+                                    <button type="submit" style="color:#337ab7;">
+                                        <i>🔓</i> Đăng xuất
+                                    </button>
+                                </form>
+                                
+                            </li>
+                        </ul>
+                    </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Đăng Tin Cho Thuê Phòng</h1>
+            @if (!ViewData.ModelState.IsValid)
+            {
+                <div class="text-danger">
+                    @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                    {
+                        <p>@error.ErrorMessage</p>
+                    }
+                </div>
+            }
+
+            <form asp-action="SubmitRoom" asp-controller="Room" method="post" enctype="multipart/form-data">
+                <!-- Tiêu đề phòng -->
+                <div class="form-group">
+                    <label asp-for="Name">Tiêu đề phòng:</label>
+                    <input asp-for="Name" class="form-control" required />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="OwnerName">Họ và tên:</label>
+                    <input asp-for="OwnerName" class="form-control" required />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="DatePosted">Ngày đăng:</label>
+                    <input asp-for="DatePosted" type="date" class="form-control" required />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="ImageFile">Hình ảnh phòng:</label>
+                    <input asp-for="ImageFile" type="file" accept="image/*" required />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Address">Địa chỉ:</label>
+                    <input asp-for="Address" class="form-control" required />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Description">Nội dung chi tiết:</label>
+                    <textarea asp-for="Description" class="form-control" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Price">Giá:</label>
+                    <input asp-for="Price" type="number" class="form-control" required />
+                </div>
+
+                <!-- Nút đăng phòng -->
+                <button type="submit" class="btn btn-primary">Đăng tin cho thuê</button>
+            </form>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <nav class="navBar">
+                <ul>
+                    <li><a href="@Url.Action("Index", "Home")">TRANG CHỦ</a></li>
+                    <li><a href="#">QUAY LẠI ĐẦU TRANG</a></li>
+                    <li><a href="https://zalo.me/0399848871">LIÊN HỆ VỚI CHÚNG TÔI</a></li>
+                </ul>
+            </nav>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="~/js/navbar.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.1/jquery.validate.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/mvc/5.2.3/jquery.validate.unobtrusive.min.js"></script>
+    
+    <script>
+        
+    </script>
+</body>
+</html>
+
+

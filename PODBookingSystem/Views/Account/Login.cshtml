@@ -1,0 +1,73 @@
+﻿@{
+    Layout = null;
+}
+
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <title>POD BOOKING</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="@Url.Content("~/img/logo.ico")">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="@Url.Content("~/css/login_register_edit_create.css")">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logoArea">
+                <a href="@Url.Content("~/")" class="image"><img src="@Url.Content("~/img/logo2.png")" alt="Logo"></a>
+                <a href="@Url.Content("~/")" class="siteName">
+                    <h1><span class="highlight">POD</span> BOOKING</h1>
+                </a>
+            </div>
+            <div class="menuArea">
+                <div class="menuBtn">
+                    <span class="line-1"></span>
+                    <span class="line-2"></span>
+                    <span class="line-3"></span>
+                </div>
+            </div>
+            <div class="navBar">
+                <ul>
+                    <li><a href="#" class="active">🏠Trang chủ</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="bg1">
+        <div class="main-container">
+            <div class="box">
+                <h1 class="formName">Đăng nhập</h1>
+                <form id="loginForm" action="@Url.Action("Login", "Account")" method="post">
+                    <label>Email</label>
+                    <input id="email" name="email" type="email" required />
+
+                    <label>Mật khẩu</label>
+                    <input id="password" name="password" type="password" required />
+
+                    <button class="submitBtn" type="submit">Đăng nhập</button>
+                </form>
+                <p class="login-register">
+                Bạn chưa có tài khoản? <a asp-controller="Account" asp-action="Register">Đăng ký tại đây</a>
+            </p>
+            <a asp-action="LoginWithGoogle" asp-controller="Account" class="btn google">
+                <img src="~/img/icon_google.png" alt="Google Icon" class="icon"> Đăng nhập với Google
+            </a>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+       
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="@Url.Content("~/js/home.js")"></script>
+</body>
+<script src="@Url.Content("~/js/navbar.js")"></script>
+</html>

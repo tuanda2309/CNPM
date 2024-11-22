@@ -1,0 +1,136 @@
+﻿@model PODBookingSystem.ViewModels.ProfileViewModel
+@{
+    Layout = null;
+}
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <title>POD BOOKING</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="img/logo.ico">
+    <!-- GOOGLE FONTS CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&display=swap">
+    <!-- FONT AWESOME CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="~/css/profile.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logoArea">
+                <a asp-controller="Home" asp-action="Index" class="image"><img src="~/img/logo2.png" alt="POD Booking Logo"></a>
+                <a asp-controller="Home" asp-action="Index" class="siteName">
+                    <h1><span class="highlight">POD</span> BOOKING</h1>
+                </a>
+            </div>
+            <div class="menuArea">
+                <div class="menuBtn">
+                    <span class="line-1"></span>
+                    <span class="line-2"></span>
+                    <span class="line-3"></span>
+                </div>
+            </div>
+            <div class="navBar">
+                <ul>
+                    <li>
+                        <a asp-controller="Account" asp-action="Profile">
+                            <img id="menu-profile-image" src="@Url.Content(Model.Image)" alt="Profile Image" style="width: 30px; height: 30px; border-radius: 50%;">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <div class="main-container">
+            <div class="sideBar">
+                <div class="sideBar-container">
+                    <img id="profile-image" src="@Model.Image" alt="Ảnh hồ sơ">
+                    <h1 id="profile-username">@Model.Username</h1>
+                    <h2 id="profile-email">@Model.Email</h2>
+                    <h2 id="profile-role">Vai trò: @Model.Role</h2>
+                    <p id="profile-title">@Model.Title</p>
+                </div>
+            </div>
+            <section>
+                <div class="myGamesArea">
+                    <h1>Phòng đã đặt trước đó</h1>
+                    <hr>
+                    <div class="postContainer">
+                        @* Render danh sách phòng đã đặt từ Model *@
+                        @foreach (var room in Model.BookedRooms)
+                        {
+                            <div class="post">
+                                <a asp-controller="Room" asp-action="Details" asp-route-id="@room.RoomId">
+                                    <img src="@room.Image" alt="@room.Name">
+                                </a>
+                                <a asp-controller="Room" asp-action="Details" asp-route-id="@room.RoomId">
+                                    <h2>@room.Name</h2>
+                                </a>
+                            </div>
+                        }
+                    </div>
+                </div>
+                <div class="settingsArea">
+                    <h1>Cài đặt</h1>
+                    <hr>
+                    <div class="settings">
+                        <form asp-action="UpdateProfile" asp-controller="Account" method="post" enctype="multipart/form-data">
+                            <div class="row">
+                                <h2>Tên người dùng: </h2>
+                                <input id="username" type="text" name="UserName" value="@Model.Username" required minlength="3">
+                            </div>
+
+                            <div class="row">
+                                <h2>Ảnh hồ sơ: </h2>
+                                <input id="imageInput" type="file" name="ImageFile" accept="image/*">
+                                @if (!string.IsNullOrEmpty(Model.Image))
+                                {
+                                    <img id="profile-image-preview" src="@Url.Content(Model.Image)" alt="Ảnh hồ sơ" style="max-width: 150px; margin-top: 10px;">
+                                }
+                            </div>
+
+                            <div class="row">
+                                <h2>Tiêu đề hồ sơ: </h2>
+                                <textarea id="title" name="Title">@Model.Title</textarea>
+                            </div>
+
+                            <button class="submitBtn" type="submit">Lưu thay đổi</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <nav class="navBar">
+                <ul>
+                    <li><a href="@Url.Action("Index", "Home")">TRANG CHỦ</a></li>
+                    <li><a href="#">QUAY LẠI ĐẦU TRANG</a></li>
+                    <li><a href="https://zalo.me/0399848871">LIÊN HỆ VỚI CHÚNG TÔI</a></li>
+                </ul>
+            </nav>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://github.com/tuanda2309" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="~/js/profile.js"></script>
+
+
+</body>
+
+</html>

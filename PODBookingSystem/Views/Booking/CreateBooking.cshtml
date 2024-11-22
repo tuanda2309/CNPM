@@ -1,0 +1,132 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <title>Tạo Đặt Phòng - POD BOOKING</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="~/img/logo.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="~/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logoArea">
+                <a asp-action="Index" asp-controller="Home" class="image"><img src="~/img/logo2.png" alt="POD BOOKING Logo"></a>
+                <a asp-action="Index" asp-controller="Home" class="siteName">
+                    <h1><span class="highlight">POD</span> BOOKING</h1>
+                </a>
+            </div>
+            <div class="menuArea">
+                <div class="menuBtn">
+                    <span class="line-1"></span>
+                    <span class="line-2"></span>
+                    <span class="line-3"></span>
+                </div>
+            </div>
+            <div class="navBar">
+                <ul>
+                    <li><a href="@Url.Action("Index", "Home")">🏠Trang chủ</a></li>
+                    <li><a asp-controller="Room" asp-action="SeeRoom">💻Xem phòng</a></li>
+                    <li><a asp-controller="Service" asp-action="Service">🏪Dịch vụ</a></li>
+                    <li><a asp-controller="Calendar" asp-action="Calendar">📆Lịch</a></li>
+                    <li><a asp-controller="Room" asp-action="Vip">🕌Phòng VIP</a></li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        if (User.IsInRole("Staff"))
+                        {
+                            <li><a asp-controller="Room" asp-action="CreateRoom">✍️ Đăng phòng</a></li>
+                        }
+                        <li class="profile-dropdown">
+                            <a href="javascript:void(0);" class="profile-btn">
+                                @{
+                                    var profileImage = User.FindFirst("ProfileImage")?.Value ?? "~/img/default_image_path.png";
+                                }
+                                <img id="menu-profile-image" src="@Url.Content(profileImage)" alt="Profile Image" style="width: 30px; height: 30px; border-radius: 50%;">
+                            </a>
+                            <ul class="dropdown-content">
+                                <li>
+                                    <a asp-controller="Account" asp-action="Profile">👤 Xem hồ sơ</a>
+                                </li>
+                                <li>
+                                    <form asp-controller="Account" asp-action="Logout" method="post">
+                                        <button type="submit" style="color:#337ab7;">
+                                            <i>🔓</i> Đăng xuất
+                                        </button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </header>
+
+<main class="bg1">
+    <div class="main-container">
+        <div class="box">
+            <h1 class="formName">Đặt Phòng</h1>
+
+            <!-- Form đặt phòng -->
+        <form asp-action="CreateBooking" asp-controller="Booking" method="post">
+            <input type="hidden" name="RoomId" value="@ViewBag.RoomId" />
+            <input type="hidden" name="PaymentMethod" id="PaymentMethod" />
+
+            <div class="form-group">
+                <label for="StartTime">Thời gian bắt đầu:</label>
+                <input type="datetime-local" id="StartTime" name="StartTime" class="form-control" required />
+            </div>
+
+            <div class="form-group">
+                <label for="EndTime">Thời gian kết thúc:</label>
+                <input type="datetime-local" id="EndTime" name="EndTime" class="form-control" required />
+            </div>
+
+            <div class="form-group">
+                <label>Chọn phương thức thanh toán:</label>
+                <div class="payment-buttons">
+                    <button type="button" class="btn btn-primary" onclick="selectPaymentMethod('momo')">Momo</button>
+                    <button type="button" class="btn btn-secondary" onclick="selectPaymentMethod('bank')">Ngân hàng</button>
+                </div>
+            </div>
+
+            <button type="submit">Đặt phòng</button>
+        </form>
+
+            @if (!ViewData.ModelState.IsValid)
+            {
+                <div class="alert alert-danger">
+                    <strong>Có lỗi xảy ra:</strong>
+                    <ul>
+                        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                        {
+                            <li>@error.ErrorMessage</li>
+                        }
+                    </ul>
+                </div>
+            }
+        </div>
+    </div>
+</main>
+
+    <footer></footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="~/js/home.js"></script>
+    <script src="~/js/navbar.js"></script>
+
+    <script>
+        // XỬ LÝ PHƯƠNG THỨC THANH TOÁN KHI NGƯỜI DÙNG CHỌN
+        function selectPaymentMethod(method) {
+            document.getElementById('PaymentMethod').value = method;
+        }
+    </script>
+</body>
+</html>
