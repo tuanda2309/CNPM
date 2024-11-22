@@ -1,0 +1,71 @@
+@import url('components/base.css');
+@import url('components/header.css');
+@import url('components/footer.css');
+@import url('components/error-box.css');
+
+main {
+    height: 750px;
+    display: flex;
+    background: url("../img/bg.png");
+    background-size: cover;
+    background-position: center;
+}
+main .notFound {
+    margin: auto;
+    text-align: center;
+}
+main .notFound h1 {
+    font-size: 150px;
+    font-weight: bold;
+}
+
+ /* Thanh điều hướng */
+.navBar ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.navBar ul li {
+    position: relative; 
+    margin-right: 10px;
+}
+
+.navBar ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+
+.dropdown .dropbtn {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
